@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panadería Artesanal en Condesa | Masa Madre, Croissants y Café | Masa & Trigo</title>
+<meta name="description" content="Panadería artesanal en Condesa con masa madre de fermentación lenta, croissants de mantequilla, pastelería de autor y café de especialidad. Ordena en línea o recoge sin fila.">
+<link rel="canonical" href="https://masaytrigo.com.mx/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Masa & Trigo — Panadería Rústica de Masa Madre y Pastelería de Autor">
+<meta property="og:description" content="El tiempo perfecto hace al pan honesto. Hogazas de 36 horas, bollería laminada y café de especialidad en Condesa, CDMX.">
+<meta property="og:url" content="https://masaytrigo.com.mx/">
+<meta property="og:image" content="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/13033b9db-eda2-40ba-8b7f-893f06bd5df1.png">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F9F6F0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%233E2723'/%3E%3Cpath d='M16 6v20M16 10c-3-1-5-3-5-6 3 0 5 2 5 6zm0 0c3-1 5-3 5-6-3 0-5 2-5 6zm0 6c-3-1-5-3-5-6 3 0 5 2 5 6zm0 0c3-1 5-3 5-6-3 0 5 2 5 6zm0 6c-3-1-5-3-5-6 3 0 5 2 5 6zm0 0c3-1 5-3 5-6-3 0 5 2 5 6z' stroke='%23D8A45F' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display/latin-700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display/latin-italic-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lora/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lora/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lora/latin-italic-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/quicksand/latin-400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/quicksand/latin-500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/quicksand/latin-600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/quicksand/latin-700.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#F9F6F0', cocoa: '#3E2723', wheat: '#D8A45F',
+        olive: '#7A8450', linework: '#D8C7AD', paper: '#FFFDF8'
+      },
+      fontFamily: {
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        editorial: ['Lora', 'Georgia', 'serif'],
+        ui: ['Quicksand', 'system-ui', 'sans-serif']
+      },
+      borderRadius: { kraft: '20px', kraftlg: '24px' }
+    }
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  :root{ --cream:#F9F6F0; --cocoa:#3E2723; --wheat:#D8A45F; --olive:#7A8450; --line:#D8C7AD; --paper:#FFFDF8; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--cream); color:var(--cocoa); font-family:Quicksand,system-ui,sans-serif; overflow-x:hidden; }
+  /* FIX: ningún overlay puede quedar visible por encima del contenido */
+  [hidden]{ display:none !important; }
+  ::selection{ background:#D8A45F55; }
+  :focus-visible{ outline:3px solid var(--olive); outline-offset:3px; border-radius:6px; }
+  .grain::after{ content:""; position:fixed; inset:0; pointer-events:none; z-index:5; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E"); }
+  .skip-link{ position:absolute; left:-9999px; top:0; z-index:200; background:var(--cocoa); color:var(--cream); padding:.75rem 1.25rem; border-radius:0 0 12px 0; }
+  .skip-link:focus{ left:0; }
+  .line-mask{ display:block; overflow:hidden; }
+  .line-mask > span{ display:block; will-change:transform,filter; }
+  .btn-primary{ background:var(--wheat); color:var(--cocoa); font-weight:700; border-radius:999px; padding:.95rem 1.9rem; display:inline-flex; align-items:center; gap:.6rem; transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s, background .35s; box-shadow:0 6px 18px -8px rgba(62,39,35,.45); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 26px -12px rgba(62,39,35,.5); background:#e0b075; }
+  .btn-ghost{ border:1.5px solid var(--cocoa); color:var(--cocoa); font-weight:600; border-radius:999px; padding:.9rem 1.7rem; display:inline-flex; align-items:center; gap:.55rem; transition:background .3s,color .3s,transform .35s; }
+  .btn-ghost:hover{ background:var(--cocoa); color:var(--cream); transform:translateY(-2px); }
+  .card-kraft{ background:var(--paper); border:1px solid var(--line); border-radius:20px; overflow:hidden; transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s; }
+  .card-kraft:hover{ transform:scale(1.02); box-shadow:0 18px 34px -20px rgba(62,39,35,.35); }
+  .card-kraft .ph{ overflow:hidden; }
+  .card-kraft .ph img{ transition:transform .8s cubic-bezier(.22,1,.36,1); }
+  .card-kraft:hover .ph img{ transform:scale(1.04); }
+  .chip{ display:inline-flex; align-items:center; gap:.35rem; font-size:.68rem; font-weight:600; letter-spacing:.04em; border:1px solid var(--line); border-radius:999px; padding:.22rem .6rem; color:#5d4037; background:#F4EDE1; }
+  .chip i{ width:6px; height:6px; border-radius:999px; background:var(--olive); display:inline-block; }
+  .stamp-seal{ border:1.5px solid var(--wheat); color:#8a5a1f; border-radius:999px; padding:.4rem 1rem; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; display:inline-flex; gap:.5rem; align-items:center; }
+  .tab-btn{ position:relative; font-weight:600; padding:.7rem 1.15rem; border-radius:14px 14px 4px 4px; background:#F1E9DB; border:1px solid var(--line); border-bottom:none; color:#6d4c33; transition:background .3s,color .3s; white-space:nowrap; }
+  .tab-btn[aria-selected="true"]{ background:var(--paper); color:var(--cocoa); }
+  .tab-trail{ position:absolute; height:3px; background:var(--wheat); border-radius:99px; bottom:-1px; }
+  .faq-panel{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .5s cubic-bezier(.22,1,.36,1); }
+  .faq-panel.open{ grid-template-rows:1fr; }
+  .faq-panel > div{ overflow:hidden; }
+  #lightbox{ position:fixed; inset:0; z-index:90; display:none; align-items:center; justify-content:center; padding:1rem; background:rgba(36,23,19,.92); backdrop-filter:blur(4px); }
+  #lightbox.open{ display:flex; }
+  .lb-img{ max-height:74vh; width:auto; max-width:100%; border-radius:16px; }
+  .wa-float{ position:fixed; right:1rem; bottom:1rem; z-index:70; width:58px; height:58px; border-radius:999px; background:var(--cocoa); color:var(--cream); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -10px rgba(62,39,35,.55); transition:transform .35s cubic-bezier(.22,1,.36,1); }
+  .wa-float:hover{ transform:translateY(-3px) scale(1.04); }
+  .cursor-ring{ position:fixed; z-index:80; width:34px; height:34px; border:1.5px solid rgba(122,132,80,.65); border-radius:999px; pointer-events:none; transform:translate(-50%,-50%); transition:width .3s,height .3s,border-color .3s,opacity .3s; opacity:0; }
+  .cursor-ring.on{ opacity:1; }
+  .cursor-ring.big{ width:64px; height:64px; border-color:rgba(216,164,95,.9); }
+  @media (pointer:coarse){ .cursor-ring{ display:none; } }
+  .env-card{ transition:transform .5s cubic-bezier(.22,1,.36,1); transform-origin:50% 100%; }
+  .note-paper{ background:var(--paper); border:1px solid var(--line); border-radius:4px 18px 18px 18px; box-shadow:0 10px 24px -18px rgba(62,39,35,.4); }
+  .modal-sheet{ transform:translateY(120%); opacity:0; transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .4s; }
+  .modal-sheet.show{ transform:translateY(0); opacity:1; }
+  #popup{ position:fixed; z-index:85; left:1rem; bottom:1rem; width:calc(100% - 2rem); max-width:24rem; }
+  @media (min-width:768px){ #popup{ left:1.5rem; bottom:1.5rem; } }
+  #cookies{ position:fixed; z-index:86; left:.75rem; right:.75rem; bottom:.75rem; }
+  @media (min-width:768px){ #cookies{ left:1.5rem; right:auto; bottom:1.5rem; max-width:28rem; } }
+  @media (min-width:768px){
+    .modal-sheet{ transform:translateY(24px) scale(.96); }
+    .modal-sheet.show{ transform:none; }
+  }
+  .rm [data-anim], .rm .line-mask > span{ opacity:1 !important; transform:none !important; filter:none !important; clip-path:none !important; }
+  .no-js-safe [data-anim], .no-js-safe .line-mask > span{ opacity:1 !important; transform:none !important; }
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+  }
+  .hero-canvas{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+  .glass-door{ position:absolute; inset:0; background:linear-gradient(100deg, rgba(249,246,240,.92), rgba(249,246,240,.55) 60%, rgba(249,246,240,.9)); transform-origin:left; pointer-events:none; }
+</style>
+</head>
+<body class="grain antialiased no-js-safe">
+<a class="skip-link font-ui" href="#contenido">Saltar al contenido principal</a>
+
+<!-- ══════════ 0 · BARRA DE ESTADO DIARIO ══════════ -->
+<div id="statusbar" class="relative z-40 bg-cocoa text-cream/90 text-[13px] font-ui">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center gap-x-6 gap-y-1 justify-center md:justify-between">
+    <p class="flex items-center gap-2">
+      <span id="status-dot" class="inline-block w-2 h-2 rounded-full bg-olive" aria-hidden="true"></span>
+      <span id="status-text" class="font-semibold tracking-wide">Horneando hoy…</span>
+    </p>
+    <p class="hidden md:flex items-center gap-5 text-cream/75">
+      <span>Primer lote hogazas y croissants · 08:00 hrs</span>
+      <span class="text-wheat" aria-hidden="true">✦</span>
+      <span>Segundo horneado baguettes y focaccias · 12:30 hrs</span>
+    </p>
+    <a href="#menu" class="underline decoration-wheat underline-offset-4 hover:text-wheat transition" data-track="menu_day_link">Ver menú del día</a>
+  </div>
+</div>
+
+<!-- ══════════ 1 · HEADER ══════════ -->
+<header id="header" class="sticky top-0 z-50 transition-all duration-500 bg-cream/70 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 h-[72px] flex items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Masa & Trigo — inicio">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="#3E2723" stroke-width="1.6"/>
+        <path d="M20 8v24M20 13c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2zm0 7c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2zm0 7c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2z" stroke="#D8A45F" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="leading-none">
+        <span class="block font-display text-[19px] tracking-tight" style="font-weight:700">Masa &amp; Trigo</span>
+        <span class="block font-ui text-[10px] tracking-[.22em] uppercase text-cocoa/60">Panadería rústica · Condesa</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-6 font-ui text-[14px] font-semibold text-cocoa/80" aria-label="Navegación principal">
+      <a class="hover:text-cocoa" href="#menu" data-tablink="masa-madre">Pan del día</a>
+      <a class="hover:text-cocoa" href="#historia">Masa madre</a>
+      <a class="hover:text-cocoa" href="#menu" data-tablink="pasteleria">Pastelería</a>
+      <a class="hover:text-cocoa" href="#eventos">Pedidos especiales</a>
+      <a class="hover:text-cocoa" href="#menu" data-tablink="cafe">Café</a>
+      <a class="hover:text-cocoa" href="#nosotros">Nosotros</a>
+      <a class="hover:text-cocoa" href="#visitanos">Visítanos</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a id="cta-header" href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-primary font-ui text-[13.5px] !py-2.5 !px-5" data-track="click_tiendanube">
+        Ordena tu Pan en Línea
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <button id="menu-btn" class="lg:hidden p-2 rounded-xl border border-linework bg-paper" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación">
+        <svg width="22" height="22" viewBox="0 0 24 24" stroke="#3E2723" stroke-width="2" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" hidden class="lg:hidden absolute inset-x-0 top-full bg-cream border-t border-linework shadow-xl">
+    <nav class="px-6 py-6 flex flex-col gap-4 font-ui font-semibold text-cocoa" aria-label="Navegación móvil">
+      <a href="#menu" data-tablink="masa-madre" class="mob-link py-1 border-b border-linework/60">Pan del día</a>
+      <a href="#historia" class="mob-link py-1 border-b border-linework/60">Masa madre</a>
+      <a href="#menu" data-tablink="pasteleria" class="mob-link py-1 border-b border-linework/60">Pastelería</a>
+      <a href="#eventos" class="mob-link py-1 border-b border-linework/60">Pedidos especiales</a>
+      <a href="#menu" data-tablink="cafe" class="mob-link py-1 border-b border-linework/60">Café</a>
+      <a href="#nosotros" class="mob-link py-1 border-b border-linework/60">Nosotros</a>
+      <a href="#visitanos" class="mob-link py-1">Visítanos</a>
+      <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-primary justify-center mt-2" data-track="click_tiendanube">Ordena tu Pan en Línea</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<!-- ══════════ 2 · HERO INMERSIVO ══════════ -->
+<section id="top" class="relative min-h-[92svh] flex items-center overflow-hidden bg-cream" aria-labelledby="hero-h1">
+  <div class="absolute inset-0" aria-hidden="true">
+    <img id="hero-img" src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/13033b9db-eda2-40ba-8b7f-893f06bd5df1.png" alt="" fetchpriority="high" class="w-full h-full object-cover object-[68%_center] opacity-90 md:opacity-100 md:[clip-path:inset(0_0_0_38%)]">
+    <div class="absolute inset-0 bg-gradient-to-r from-cream via-cream/85 md:via-cream/40 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-cream/70 via-transparent to-cream/40"></div>
+    <canvas id="flour-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <svg class="absolute right-[4%] top-[12%] w-[38vw] max-w-[420px] opacity-70 hidden md:block" viewBox="0 0 300 420" fill="none" aria-hidden="true">
+      <path id="wheat-line-1" d="M250 400C210 320 240 250 200 180S160 80 190 20" stroke="#D8A45F" stroke-width="1.6" stroke-linecap="round"/>
+      <path id="wheat-line-2" d="M120 410C150 330 110 260 150 190S190 90 160 30" stroke="#7A8450" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+      <g id="wheat-ears" stroke="#D8A45F" stroke-width="1.4" stroke-linecap="round">
+        <path d="M190 60c-16-6-24-18-24-32 16 2 24 14 24 32zm0 0c16-6 24-18 24-32-16 2-24 14-24 32zm0 34c-16-6-24-18-24-32 16 2 24 14 24 32zm0 0c16-6 24-18 24-32-16 2-24 14-24 32zm0 34c-16-6-24-18-24-32 16 2 24 14 24 32zm0 0c16-6 24-18 24-32-16 2-24 14-24 32z"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-24 w-full">
+    <div class="max-w-2xl">
+      <p id="hero-eyebrow" class="font-ui text-[12px] md:text-[13px] tracking-[.28em] uppercase text-olive mb-6" style="font-weight:700">Panadería artesanal · Condesa, CDMX</p>
+      <h1 id="hero-h1" class="font-display text-cocoa leading-[1.04] mb-7" style="font-size:clamp(2.6rem,6.4vw,4.9rem); font-weight:700">
+        <span class="line-mask"><span class="hero-line">El tiempo perfecto</span></span>
+        <span class="line-mask"><span class="hero-line">hace al pan</span></span>
+        <span class="line-mask"><span class="hero-line italic" style="font-style:italic">honesto.</span></span>
+      </h1>
+      <p id="hero-lead" class="font-editorial text-cocoa/80 text-[17px] md:text-[19px] leading-relaxed max-w-xl mb-9">
+        Hogazas de masa madre de fermentación lenta, bollería laminada con mantequilla auténtica, pastelería de autor y café de especialidad para acompañar tus días sin prisa.
+      </p>
+      <div id="hero-ctas" class="flex flex-wrap items-center gap-4 mb-10">
+        <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-primary font-ui" data-track="click_order_hero">
+          Ordena tu Pan en Línea
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a href="#menu" class="btn-ghost font-ui" data-track="menu_day_link">Ver Menú del Día</a>
+      </div>
+      <ul id="hero-trust" class="flex flex-wrap gap-x-7 gap-y-2 font-ui text-[12.5px] md:text-[13px] font-semibold text-cocoa/70">
+        <li class="trust-item flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Masa madre viva desde 2020</li>
+        <li class="trust-item flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Fermentación lenta de 36 horas</li>
+        <li class="trust-item flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Horneado diario</li>
+      </ul>
+    </div>
+  </div>
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-cocoa/50" aria-hidden="true">
+    <svg width="20" height="30" viewBox="0 0 20 30" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="1" width="18" height="28" rx="9"/><path d="M10 7v6"/></svg>
+  </div>
+</section>
+
+<!-- ══════════ 3 · PRUEBA DE OFICIO ══════════ -->
+<section id="oficio" class="relative py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="oficio-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="stamp-seal mb-4" data-anim="stamp">Sellos del obrador</p>
+    <h2 id="oficio-title" class="font-display text-[clamp(1.9rem,4vw,3rem)] mb-14" style="font-weight:700">El oficio se demuestra <span class="italic">horneando</span>.</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="stamp card-kraft p-7 text-center" data-anim="stamp">
+        <svg class="mx-auto mb-4" width="54" height="54" viewBox="0 0 54 54" fill="none" aria-hidden="true"><circle cx="27" cy="27" r="24" stroke="#D8A45F" stroke-width="1.6" stroke-dasharray="3 5"/><circle cx="27" cy="27" r="17" stroke="#3E2723" stroke-width="1.2"/><path d="M27 17v20M27 21c-4-1.4-6.6-4-6.6-8 4 0 6.6 2.6 6.6 8zm0 0c4-1.4 6.6-4 6.6-8-4 0-6.6 2.6-6.6 8zm0 8c-4-1.4-6.6-4-6.6-8 4 0 6.6 2.6 6.6 8zm0 0c4-1.4 6.6-4 6.6-8-4 0-6.6 2.6-6.6 8z" stroke="#7A8450" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <p class="font-display text-4xl mb-1" style="font-weight:700"><span class="count" data-count="36">36</span> h</p>
+        <p class="font-ui font-semibold text-cocoa/75 text-sm">de fermentación lenta</p>
+      </article>
+      <article class="stamp card-kraft p-7 text-center" data-anim="stamp">
+        <svg class="mx-auto mb-4" width="54" height="54" viewBox="0 0 54 54" fill="none" aria-hidden="true"><path d="M12 34c0-9 7-16 15-16s15 7 15 16c0 4-3 7-7 7H19c-4 0-7-3-7-7z" stroke="#3E2723" stroke-width="1.4"/><path d="M20 30c2-3 5-3 7 0s5 3 7 0" stroke="#D8A45F" stroke-width="1.4" stroke-linecap="round"/><path d="M27 18v-6m0 0c-2-2-2-5 0-7 2 2 2 5 0 7z" stroke="#7A8450" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <p class="font-display text-4xl mb-1" style="font-weight:700"><span class="count" data-count="2020">2020</span></p>
+        <p class="font-ui font-semibold text-cocoa/75 text-sm">masa madre viva cultivada desde entonces</p>
+      </article>
+      <article class="stamp card-kraft p-7 text-center" data-anim="stamp">
+        <svg class="mx-auto mb-4" width="54" height="54" viewBox="0 0 54 54" fill="none" aria-hidden="true"><path d="M14 40h26l-3-14H17l-3 14z" stroke="#3E2723" stroke-width="1.4" stroke-linejoin="round"/><path d="M22 26c0-6 2-10 5-14 3 4 5 8 5 14" stroke="#7A8450" stroke-width="1.3" stroke-linecap="round"/><path d="M20 33h14" stroke="#D8A45F" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <p class="font-display text-[26px] leading-tight mb-1" style="font-weight:700">Harinas agroecológicas</p>
+        <p class="font-ui font-semibold text-cocoa/75 text-sm">mexicanas, molidas a la piedra, sin conservadores</p>
+      </article>
+      <article class="stamp card-kraft p-7 text-center" data-anim="stamp">
+        <svg class="mx-auto mb-4" width="54" height="54" viewBox="0 0 54 54" fill="none" aria-hidden="true"><circle cx="27" cy="27" r="20" stroke="#D8A45F" stroke-width="1.6"/><path d="M27 15l3.4 7 7.6 1-5.5 5.4 1.3 7.6-6.8-3.6-6.8 3.6 1.3-7.6L16 23l7.6-1 3.4-7z" stroke="#3E2723" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <p class="font-display text-[22px] leading-tight mb-1" style="font-weight:700">Guía de Panaderías Artesanales CDMX 2024</p>
+        <p class="font-ui font-semibold text-cocoa/75 text-sm">y finalistas del Festival del Pan de Muerto Artesanal 2024</p>
+      </article>
+    </div>
+    <svg id="oficio-line" class="mt-12 w-full h-8 opacity-70" viewBox="0 0 1200 32" fill="none" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 16c60-10 120 10 180 0s120-10 180 0 120 10 180 0 120-10 180 0 120 10 180 0 120-10 180 0 60 6 120 0" stroke="#D8A45F" stroke-width="1.4" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══════════ 4 · LA HISTORIA DE LA MASA ══════════ -->
+<section id="historia" class="relative py-20 md:py-28 bg-paper border-y border-linework overflow-hidden" aria-labelledby="historia-title">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="stamp-seal mb-5" data-anim="word">Capítulo I · La masa</p>
+      <h2 id="historia-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)] leading-[1.1] mb-7 split-words" style="font-weight:700">Todo buen pan comienza con tiempo.</h2>
+      <div class="space-y-5 font-editorial text-cocoa/80 text-[16.5px] md:text-[17.5px] leading-relaxed">
+        <p class="story-p">Masa &amp; Trigo nació en 2020, cuando dos apasionados de la gastronomía decidieron devolver al pan su valor nutricional, su reposo y su sabor honesto.</p>
+        <p class="story-p">De un pequeño horno casero a un obrador abierto en Condesa, cada hogaza mantiene la misma idea: ingredientes elementales, técnica rigurosa y respeto por los ritmos naturales.</p>
+        <p class="story-p italic text-olive" style="font-style:italic">Mezclar → Reposar → Fermentar → Hornear: cuatro verbos que repetimos cada madrugada desde hace seis años.</p>
+      </div>
+      <ol id="timeline" class="mt-9 flex flex-wrap gap-3 font-ui text-[12.5px] tracking-wide uppercase" aria-label="Proceso del pan" style="font-weight:700">
+        <li class="tl-step border border-wheat text-[#8a5a1f] rounded-full px-4 py-1.5 bg-cream">Mezclar</li>
+        <li class="tl-step border border-wheat text-[#8a5a1f] rounded-full px-4 py-1.5 bg-cream">Reposar</li>
+        <li class="tl-step border border-wheat text-[#8a5a1f] rounded-full px-4 py-1.5 bg-cream">Fermentar</li>
+        <li class="tl-step border border-wheat text-[#8a5a1f] rounded-full px-4 py-1.5 bg-cream">Hornear</li>
+      </ol>
+    </div>
+    <div class="grid grid-cols-2 gap-4 md:gap-5">
+      <figure class="story-img space-y-4 md:space-y-5">
+        <img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/16bcdfba7-53b0-498e-94f4-3c88008e598d.png" alt="Manos del panadero boleando masa sobre banco de madera" loading="lazy" width="512" height="512" class="w-full h-[240px] md:h-[300px] object-cover rounded-kraft border border-linework">
+        <img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1580b464d-f094-4c7b-985b-9bee6dbdfc20.png" alt="Harina espolvoreada a mano levantando una nube tibia en el obrador" loading="lazy" width="512" height="512" class="w-full h-[200px] md:h-[240px] object-cover rounded-kraft border border-linework">
+      </figure>
+      <figure class="story-img space-y-4 md:space-y-5 mt-8">
+        <img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/11892a25f-3876-4460-a9f7-1189ae868f86.png" alt="Cestas banneton con masa en fermentación sobre tablones de madera" loading="lazy" width="512" height="512" class="w-full h-[200px] md:h-[240px] object-cover rounded-kraft border border-linework">
+        <img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1f8fcdc4b-7e15-411b-b3e2-27610a9cec6e.png" alt="Greñado de hogaza con navaja curva y polvo de harina" loading="lazy" width="512" height="512" class="w-full h-[240px] md:h-[300px] object-cover rounded-kraft border border-linework">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 5 · MENÚ DIGITAL Y VITRINA ══════════ -->
+<section id="menu" class="py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="menu-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-10">
+      <div>
+        <p class="stamp-seal mb-4">Vitrina · Capítulos II–V</p>
+        <h2 id="menu-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)]" style="font-weight:700">El menú del día, <span class="italic">horneado hace un rato</span>.</h2>
+      </div>
+      <p class="font-ui text-sm text-cocoa/65 max-w-sm">Precios en MXN sujetos a horneado diario. Todo puede ordenarse en línea para entrega o Click &amp; Collect.</p>
+    </div>
+
+    <div class="relative mb-10 overflow-x-auto pb-1" role="tablist" aria-label="Categorías del menú">
+      <div id="tabs-row" class="relative flex gap-2 min-w-max px-1 pt-2">
+        <span id="tab-trail" class="tab-trail" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div id="menu-panels" class="relative"></div>
+
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-primary font-ui" data-track="click_order_menu">Ordenar en línea
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a href="https://wa.me/525534901288?text=Hola%20Masa%20%26%20Trigo!%20Quiero%20consultar%20la%20disponibilidad%20del%20pan%20del%20d%C3%ADa%20y%20encargar%20un%20pedido%20para%20entrega%2Frecogida." target="_blank" rel="noopener" class="btn-ghost font-ui" data-track="click_whatsapp_order">Pedir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 6 · PRODUCTOS ESTRELLA ══════════ -->
+<section id="estrellas" class="py-20 md:py-28 bg-cocoa text-cream overflow-hidden" aria-labelledby="estrellas-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="stamp-seal mb-4 !border-wheat/60 !text-wheat">Trío de la casa</p>
+    <h2 id="estrellas-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)] mb-14" style="font-weight:700">Los tres que <span class="italic text-wheat">nunca faltan</span> en el mostrador.</h2>
+    <div class="grid md:grid-cols-3 gap-7">
+      <article class="star-card relative rounded-kraftlg overflow-hidden bg-[#4a312a] border border-[#5d4037]" data-anim="star">
+        <div class="glass-door" data-door aria-hidden="true"></div>
+        <div class="ph"><img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/10e1ef9b7-36d1-46d9-8947-3a64e76fa573.png" alt="Croissant de mantequilla laminado artesanalmente" loading="lazy" width="512" height="512" class="w-full h-64 object-cover"></div>
+        <div class="p-7">
+          <svg class="mb-3 star-lines" width="120" height="26" viewBox="0 0 120 26" fill="none" aria-hidden="true"><path d="M4 20c14-10 26-10 40 0M28 20c14-12 28-12 42 0M52 20c14-10 26-10 40 0" stroke="#D8A45F" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3 class="font-display text-2xl mb-2" style="font-weight:700">Croissant de mantequilla</h3>
+          <p class="font-editorial text-cream/75 text-[15px] mb-4">“Capas que crujen, mantequilla que perfuma la mañana.”</p>
+          <p class="font-ui text-xs text-cream/60 mb-5">Laminado en 3 días · $55 MXN</p>
+          <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="font-ui text-sm text-wheat underline underline-offset-4" style="font-weight:700" data-track="click_order_menu">Ordenar croissants</a>
+        </div>
+      </article>
+      <article class="star-card relative rounded-kraftlg overflow-hidden bg-[#4a312a] border border-[#5d4037]" data-anim="star">
+        <div class="glass-door" data-door aria-hidden="true"></div>
+        <div class="ph"><img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/11688d619-8861-4ea5-aa8d-4ed91ea83c25.png" alt="Hogaza rústica de masa madre cortada mostrando alveolos" loading="lazy" width="512" height="512" class="w-full h-64 object-cover"></div>
+        <div class="p-7">
+          <svg class="mb-3 star-lines" width="120" height="26" viewBox="0 0 120 26" fill="none" aria-hidden="true"><path d="M60 22V6M60 12l-12-8M60 12l12-8M60 18l-18-6M60 18l18-6" stroke="#D8A45F" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3 class="font-display text-2xl mb-2" style="font-weight:700">Hogaza Rústica 800 g</h3>
+          <p class="font-editorial text-cream/75 text-[15px] mb-4">“36 horas de paciencia para una miga viva y una corteza que canta al partirse.”</p>
+          <p class="font-ui text-xs text-cream/60 mb-5">Fermentación lenta · $145 MXN</p>
+          <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="font-ui text-sm text-wheat underline underline-offset-4" style="font-weight:700" data-track="click_order_menu">Ordenar hogaza</a>
+        </div>
+      </article>
+      <article class="star-card relative rounded-kraftlg overflow-hidden bg-[#4a312a] border border-[#5d4037]" data-anim="star">
+        <div class="glass-door" data-door aria-hidden="true"></div>
+        <div class="ph"><img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/131507680-7796-412c-9d0b-36874876e6dc.png" alt="Basque burnt cheesecake con superficie caramelizada" loading="lazy" width="512" height="512" class="w-full h-64 object-cover"></div>
+        <div class="p-7">
+          <svg class="mb-3 star-lines" width="120" height="26" viewBox="0 0 120 26" fill="none" aria-hidden="true"><circle cx="60" cy="13" r="4" stroke="#D8A45F" stroke-width="1.5"/><circle cx="60" cy="13" r="9" stroke="#D8A45F" stroke-width="1.1" opacity=".7"/><circle cx="60" cy="13" r="13" stroke="#D8A45F" stroke-width=".8" opacity=".4"/></svg>
+          <h3 class="font-display text-2xl mb-2" style="font-weight:700">Basque Burnt Cheesecake</h3>
+          <p class="font-editorial text-cream/75 text-[15px] mb-4">“Cremoso al centro, tostado en los bordes, equilibrado hasta la última cucharada.”</p>
+          <p class="font-ui text-xs text-cream/60 mb-5">Rebanada $95 · entero $520 MXN</p>
+          <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="font-ui text-sm text-wheat underline underline-offset-4" style="font-weight:700" data-track="click_order_menu">Ordenar cheesecake</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 7 · ESPECIAL DE LA SEMANA Y TEMPORADAS ══════════ -->
+<section id="temporada" class="py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="temp-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="stamp-seal mb-4">Novedades del obrador</p>
+    <h2 id="temp-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)] mb-12" style="font-weight:700">Especial de la semana <span class="italic">y temporadas</span>.</h2>
+    <div class="grid lg:grid-cols-4 gap-6">
+      <article class="season-card lg:col-span-2 relative card-kraft p-8 md:p-10 border-wheat/70 bg-[#FBF3E4]" data-anim="season">
+        <svg class="absolute top-6 right-6 w-16 h-16 opacity-80 season-stamp" viewBox="0 0 64 64" fill="none" aria-hidden="true"><circle cx="32" cy="32" r="28" stroke="#8a5a1f" stroke-width="1.4" stroke-dasharray="4 4"/><path d="M32 18v28M32 24c-5-1.6-8-4.8-8-9.6 4.8 0 8 3.2 8 9.6zm0 0c5-1.6 8-4.8 8-9.6-4.8 0-8 3.2-8 9.6zm0 10c-5-1.6-8-4.8-8-9.6 4.8 0 8 3.2 8 9.6zm0 0c5-1.6 8-4.8 8-9.6-4.8 0-8 3.2-8 9.6z" stroke="#8a5a1f" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <p class="font-ui text-xs tracking-[.24em] uppercase text-olive mb-3" style="font-weight:700">Especial de la semana</p>
+        <h3 class="font-display text-3xl mb-3" style="font-weight:700">Kouign-amann caramelizado</h3>
+        <p class="font-editorial text-cocoa/80 max-w-md mb-5">Horneado de fin de semana: hojaldre denso, caramelo ámbar y sal de mar. Disponible hasta agotar la producción diaria.</p>
+        <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-ghost font-ui !py-2.5 !px-5 text-sm" data-track="click_tiendanube">Ver especial de la semana</a>
+      </article>
+      <article class="season-card card-kraft p-7" data-anim="season">
+        <svg class="w-12 h-12 mb-4 season-stamp" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="26" r="13" stroke="#8a5a1f" stroke-width="1.4"/><path d="M14 22c3-4 7-6 10-6s7 2 10 6M18 14l3 4m6-4l-3 4" stroke="#8a5a1f" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <p class="font-ui text-[11px] tracking-[.2em] uppercase text-olive mb-2" style="font-weight:700">Sep – Nov</p>
+        <h3 class="font-display text-xl mb-2" style="font-weight:700">Pan de Muerto de masa madre</h3>
+        <p class="font-editorial text-sm text-cocoa/75">Agua de azahar, naranja natural y fermentación lenta. Hasta agotar producción diaria.</p>
+      </article>
+      <article class="season-card card-kraft p-7" data-anim="season">
+        <svg class="w-12 h-12 mb-4 season-stamp" viewBox="0 0 48 48" fill="none" aria-hidden="true"><ellipse cx="24" cy="26" rx="16" ry="10" stroke="#8a5a1f" stroke-width="1.4"/><path d="M12 24c2-3 5-3 7 0s5 3 7 0 5-3 7 0M20 18c1-2 3-2 4 0m4 0c1-2 3-2 4 0" stroke="#8a5a1f" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <p class="font-ui text-[11px] tracking-[.2em] uppercase text-olive mb-2" style="font-weight:700">Dic – Ene</p>
+        <h3 class="font-display text-xl mb-2" style="font-weight:700">Rosca de Reyes artesanal</h3>
+        <p class="font-editorial text-sm text-cocoa/75">Mantequilla pura, costra crujiente y frutas confitadas en casa.</p>
+      </article>
+      <article class="season-card card-kraft p-7 lg:col-start-2" data-anim="season">
+        <svg class="w-12 h-12 mb-4 season-stamp" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 34c-6 0-10-4-10-9s4-9 10-9 10 4 10 9-4 9-10 9z" stroke="#8a5a1f" stroke-width="1.4"/><path d="M20 22c1.5-2 3-2 4 0m4 0c1.5-2 3-2 4 0M24 16v-4m-6 6l-3-3m12 3l3-3" stroke="#8a5a1f" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <p class="font-ui text-[11px] tracking-[.2em] uppercase text-olive mb-2" style="font-weight:700">Febrero</p>
+        <h3 class="font-display text-xl mb-2" style="font-weight:700">Cruffins de chocolate ruby y frambuesa</h3>
+        <p class="font-editorial text-sm text-cocoa/75">Edición corta de invierno, laminada con cacao ruby.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 8 · PASTELES DE CELEBRACIÓN Y EVENTOS ══════════ -->
+<section id="eventos" class="py-20 md:py-28 bg-paper border-y border-linework overflow-hidden" aria-labelledby="eventos-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-14">
+      <div>
+        <div id="kraft-ribbon" class="w-3 h-24 bg-[#E8D9BC] border border-linework rounded-full mb-6 origin-top" aria-hidden="true"></div>
+        <p class="stamp-seal mb-4">Capítulo VI · Celebrar</p>
+        <h2 id="eventos-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)] mb-6" style="font-weight:700">Hechos para celebrar <span class="italic">lo que importa</span>.</h2>
+        <ul class="space-y-3 font-editorial text-cocoa/80 text-[16px] mb-8">
+          <li class="flex gap-3"><span class="text-wheat" aria-hidden="true">✦</span>Pasteles personalizados para cumpleaños, aniversarios y bodas íntimas.</li>
+          <li class="flex gap-3"><span class="text-wheat" aria-hidden="true">✦</span>Estilos naked cake, flores orgánicas comestibles y texturas naturales en buttercream o ganache. Sin fondant.</li>
+          <li class="flex gap-3"><span class="text-wheat" aria-hidden="true">✦</span>Mesas de postres rústicas y cajas surtidas para 20 a 150 personas.</li>
+        </ul>
+        <div class="grid sm:grid-cols-2 gap-4 mb-8 font-ui text-sm">
+          <div class="cake-photo card-kraft p-5"><p class="font-display text-lg mb-1" style="font-weight:700">24 horas</p><p class="text-cocoa/70">Pasteles estándar de catálogo</p></div>
+          <div class="cake-photo card-kraft p-5"><p class="font-display text-lg mb-1" style="font-weight:700">5 a 7 días</p><p class="text-cocoa/70">Personalizados y bodas</p></div>
+          <div class="cake-photo card-kraft p-5"><p class="font-display text-lg mb-1" style="font-weight:700">10 días hábiles</p><p class="text-cocoa/70">Mesas de postres y catering</p></div>
+          <div class="cake-photo card-kraft p-5"><p class="font-display text-lg mb-1" style="font-weight:700">Anticipo 50%</p><p class="text-cocoa/70">Liquidación 48 h antes · cancelación sin penalización con 4 días</p></div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img class="cake-photo rounded-kraft border border-linework w-full h-56 object-cover" src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/16abe310f-50eb-4a5e-a64e-4e4589a197ed.png" alt="Naked cake decorado con flores orgánicas comestibles" loading="lazy" width="512" height="512">
+          <img class="cake-photo rounded-kraft border border-linework w-full h-56 object-cover" src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/131c8076b-8d96-4e29-90e4-d559f372c7f2.png" alt="Mesa de postres rústica con tartas y cajas kraft surtidas" loading="lazy" width="512" height="512">
+        </div>
+      </div>
+
+      <form id="cake-form" class="card-kraft p-8 md:p-10 bg-cream" novalidate>
+        <h3 class="font-display text-2xl mb-2" style="font-weight:700">Cotiza tu celebración</h3>
+        <p class="font-ui text-sm text-cocoa/70 mb-7">Respondemos por WhatsApp o correo en menos de 24 horas hábiles.</p>
+        <div class="grid sm:grid-cols-2 gap-5 font-ui text-sm">
+          <div><label for="cf-nombre" class="block mb-1.5" style="font-weight:600">Nombre completo *</label>
+            <input id="cf-nombre" name="nombre" type="text" required autocomplete="name" class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive" aria-describedby="cf-nombre-err">
+            <p id="cf-nombre-err" class="hidden mt-1 text-[12px] text-[#9c3b2e]" role="alert" style="font-weight:600">Escribe tu nombre.</p></div>
+          <div><label for="cf-tel" class="block mb-1.5" style="font-weight:600">WhatsApp / teléfono *</label>
+            <input id="cf-tel" name="tel" type="tel" required autocomplete="tel" inputmode="tel" class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive" aria-describedby="cf-tel-err">
+            <p id="cf-tel-err" class="hidden mt-1 text-[12px] text-[#9c3b2e]" role="alert" style="font-weight:600">Necesitamos un teléfono de contacto.</p></div>
+          <div class="sm:col-span-2"><label for="cf-mail" class="block mb-1.5" style="font-weight:600">Correo *</label>
+            <input id="cf-mail" name="correo" type="email" required autocomplete="email" class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive" aria-describedby="cf-mail-err">
+            <p id="cf-mail-err" class="hidden mt-1 text-[12px] text-[#9c3b2e]" role="alert" style="font-weight:600">Revisa el formato del correo.</p></div>
+          <div><label for="cf-evento" class="block mb-1.5" style="font-weight:600">Tipo de evento *</label>
+            <select id="cf-evento" name="evento" required class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive">
+              <option value="">Selecciona…</option><option>Cumpleaños</option><option>Aniversario</option><option>Boda íntima</option><option>Evento corporativo</option><option>Mesa de postres / catering</option><option>Otro</option>
+            </select></div>
+          <div><label for="cf-fecha" class="block mb-1.5" style="font-weight:600">Fecha requerida *</label>
+            <input id="cf-fecha" name="fecha" type="date" required class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive"></div>
+          <div><label for="cf-comensales" class="block mb-1.5" style="font-weight:600">Comensales aprox. *</label>
+            <input id="cf-comensales" name="comensales" type="number" min="2" max="150" required class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive"></div>
+          <div><label for="cf-estilo" class="block mb-1.5" style="font-weight:600">Estilo o producto de interés</label>
+            <input id="cf-estilo" name="estilo" type="text" placeholder="Naked cake con flores, Basque entero…" class="w-full rounded-xl border border-linework bg-paper px-4 py-3 focus:border-olive"></div>
+        </div>
+        <div class="mt-7 flex flex-wrap gap-4 items-center">
+          <button type="submit" class="btn-primary font-ui" data-track="click_custom_cake_quote">Cotizar mi celebración</button>
+          <a href="https://wa.me/525534901288?text=Hola%20Masa%20%26%20Trigo!%20Quiero%20cotizar%20un%20pastel%20para%20un%20evento%20especial." target="_blank" rel="noopener" class="font-ui text-sm underline underline-offset-4 text-cocoa/80" style="font-weight:700" data-track="click_whatsapp_order">O directo por WhatsApp</a>
+        </div>
+        <p id="cake-ok" class="hidden mt-5 font-ui text-sm text-olive bg-[#EEF0E2] border border-olive/40 rounded-xl px-4 py-3" role="status" style="font-weight:600">¡Gracias! Recibimos tu solicitud. Te contactaremos muy pronto con la cotización. 🌾</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 9 · CLICK & COLLECT Y ENTREGA ══════════ -->
+<section id="entrega" class="py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="entrega-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="stamp-seal mb-4">Logística tibia</p>
+    <h2 id="entrega-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)] mb-6" style="font-weight:700">Del horno a tus manos, <span class="italic">como prefieras</span>.</h2>
+    <svg id="route-svg" class="w-full h-24 md:h-28 mb-10" viewBox="0 0 1000 110" fill="none" preserveAspectRatio="none" aria-hidden="true">
+      <circle cx="500" cy="55" r="10" stroke="#3E2723" stroke-width="1.6"/>
+      <path d="M500 55c-30-25-90-25-140-10S220 70 150 60" stroke="#D8A45F" stroke-width="1.8" stroke-linecap="round" id="route-pick"/>
+      <path d="M500 55c30 25 90 25 140 10s140-25 210-15" stroke="#7A8450" stroke-width="1.8" stroke-linecap="round" id="route-del"/>
+      <g stroke="#3E2723" stroke-width="1.5" fill="none" stroke-linejoin="round">
+        <path d="M132 48h36l-5 26h-26l-5-26zm6 0l4-8h12l4 8"/>
+        <circle cx="846" cy="66" r="9"/><circle cx="878" cy="66" r="9"/><path d="M846 66l8-18h14l10 18m-14-18v-6h-6"/>
+      </g>
+    </svg>
+    <div class="grid md:grid-cols-2 gap-7">
+      <article class="delivery-card card-kraft p-8" data-anim="delivery">
+        <h3 class="font-display text-2xl mb-4 flex items-center gap-3" style="font-weight:700">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a5a1f" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-2 12H7L5 8zm3 0l2-4h4l2 4"/></svg>Click &amp; Collect</h3>
+        <ul class="space-y-2.5 font-editorial text-cocoa/80 text-[15.5px]">
+          <li>Recoge en mostrador sin hacer fila una vez confirmado el pedido.</li>
+          <li>Pan y galletas: 3 a 4 horas de anticipación o mismo día según disponibilidad.</li>
+          <li>Pasteles de catálogo: 24 horas.</li>
+        </ul>
+        <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-ghost font-ui mt-6 !py-2.5 !px-5 text-sm" data-track="click_click_collect">Elegir recogida en tienda</a>
+      </article>
+      <article class="delivery-card card-kraft p-8" data-anim="delivery">
+        <h3 class="font-display text-2xl mb-4 flex items-center gap-3" style="font-weight:700">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l3-8h5l4 8m-6-8V6h-2.5"/></svg>Entrega a domicilio</h3>
+        <ul class="space-y-2.5 font-editorial text-cocoa/80 text-[15.5px]">
+          <li>Reparto en bicicleta y auto climatizado.</li>
+          <li>Cobertura: Condesa, Roma Norte y Sur, Juárez, Cuauhtémoc, Polanco, San Miguel Chapultepec, Del Valle Norte y Escandón.</li>
+          <li>Tarifa fija $60 MXN en radio de 5 km · envío gratuito en compras mayores a $650 MXN.</li>
+          <li>Zonas más lejanas: cotización por mensajería especializada.</li>
+        </ul>
+        <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-ghost font-ui mt-6 !py-2.5 !px-5 text-sm" data-track="click_delivery">Elegir entrega a domicilio</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 10 · FUNDADORES Y OBRADOR ══════════ -->
+<section id="nosotros" class="py-20 md:py-28 bg-paper border-y border-linework overflow-hidden" aria-labelledby="nosotros-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="stamp-seal mb-4">Capítulo VII · Las manos</p>
+    <h2 id="nosotros-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)] mb-14" style="font-weight:700">Quienes hornean <span class="italic">la historia</span>.</h2>
+    <div class="relative grid md:grid-cols-2 gap-10">
+      <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-24 hidden md:block opacity-70 pointer-events-none" viewBox="0 0 600 80" fill="none" aria-hidden="true">
+        <path id="flour-trace" d="M20 60C140 10 240 70 320 40s160-20 260 10" stroke="#D8A45F" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 7"/>
+      </svg>
+      <article class="founder group relative" data-anim="founder">
+        <div class="ph rounded-kraftlg overflow-hidden border border-linework">
+          <img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1862794cd-0ad0-4c83-8f83-f1e6051c38a5.png" alt="Bruno Morales, maestro panadero, cargando una hogaza al horno con pala de madera" loading="lazy" width="512" height="512" class="founder-img w-full h-[420px] object-cover transition duration-700" style="filter:sepia(.55)">
+        </div>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl" style="font-weight:700">Bruno Morales</h3>
+          <p class="font-ui text-xs tracking-[.2em] uppercase text-olive mt-1 mb-3" style="font-weight:700">Maestro panadero · Co-fundador</p>
+          <p class="font-editorial text-cocoa/80 text-[15.5px]">Estudió panadería tradicional en Barcelona y se especializó en harinas ecológicas molidas a la piedra. Lidera el trabajo de masa madre y fermentación lenta.</p>
+        </div>
+      </article>
+      <article class="founder group relative" data-anim="founder">
+        <div class="ph rounded-kraftlg overflow-hidden border border-linework">
+          <img src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1842640ab-bf4a-4c1b-880f-2b9f4a6e1c3d.png" alt="Paulina Estrada, chef pastelera, decorando una tarta con flores comestibles" loading="lazy" width="512" height="512" class="founder-img w-full h-[420px] object-cover transition duration-700" style="filter:sepia(.55)">
+        </div>
+        <div class="mt-5">
+          <h3 class="font-display text-2xl" style="font-weight:700">Paulina Estrada</h3>
+          <p class="font-ui text-xs tracking-[.2em] uppercase text-olive mt-1 mb-3" style="font-weight:700">Chef pastelera · Co-fundadora</p>
+          <p class="font-editorial text-cocoa/80 text-[15.5px]">Egresada del Centro Culinario Ambrosía con diplomado en L'École Valrhona en París. Prioriza balance de azúcares, frutas locales de temporada y flores comestibles.</p>
+        </div>
+      </article>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-5 mt-14">
+      <img class="rounded-kraft border border-linework w-full h-52 object-cover" src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/18bf21002-d1f4-4c1b-b57c-f47bd522f889.png" alt="Baristas sirviendo latte art en la barra de café" loading="lazy" width="512" height="512">
+      <img class="rounded-kraft border border-linework w-full h-52 object-cover" src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1a47d1a2b-2b9f-41ac-8550-f438f4eb4807.png" alt="Equipo completo de Masa & Trigo con delantales de lino en el obrador" loading="lazy" width="512" height="512">
+      <img class="rounded-kraft border border-linework w-full h-52 object-cover" src="https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/19caf6514-4043-4b7d-ab80-c02bb0ce80c2.png" alt="Horno de piso del obrador con hogaza entrando en la pala" loading="lazy" width="512" height="512">
+    </div>
+    <p class="mt-6 font-ui text-sm text-cocoa/65">Somos 11 personas entre obrador, barra y terraza. Cada madrugada comienza a las 4:00 am.</p>
+  </div>
+</section>
+
+<!-- ══════════ 11 · GALERÍA: LA VITRINA DIGITAL ══════════ -->
+<section id="galeria" class="py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="galeria-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-8">
+      <div>
+        <p class="stamp-seal mb-4">La vitrina digital</p>
+        <h2 id="galeria-title" class="font-display text-[clamp(2rem,4.4vw,3.3rem)]" style="font-weight:700">Lo que se ve <span class="italic">desde el mostrador</span>.</h2>
+      </div>
+      <div id="gal-filters" class="flex flex-wrap gap-2 font-ui text-[13px]" role="group" aria-label="Filtros de galería" style="font-weight:600">
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="hogazas" aria-pressed="false">Hogazas</button>
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="hojaldres" aria-pressed="false">Hojaldres</button>
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="pasteleria" aria-pressed="false">Pastelería</button>
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="cafe" aria-pressed="false">Café</button>
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="obrador" aria-pressed="false">Obrador</button>
+        <button class="gal-filter btn-ghost !py-2 !px-4 text-[13px]" data-filter="condesa" aria-pressed="false">Condesa</button>
+      </div>
+    </div>
+    <div id="gal-grid" class="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] md:auto-rows-[170px] gap-4"></div>
+  </div>
+</section>
+
+<!-- Lightbox (siempre cerrado por defecto) -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de fotografía" aria-hidden="true">
+  <button id="lb-close" class="absolute top-5 right-5 p-3 rounded-full bg-cream/10 text-cream hover:bg-cream/20 transition" aria-label="Cerrar vista ampliada (Escape)">
+    <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button id="lb-prev" class="absolute left-3 md:left-8 p-3 rounded-full bg-cream/10 text-cream hover:bg-cream/20 transition" aria-label="Imagen anterior">
+    <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button id="lb-next" class="absolute right-3 md:right-8 p-3 rounded-full bg-cream/10 text-cream hover:bg-cream/20 transition" aria-label="Imagen siguiente">
+    <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  <figure class="text-center max-w-4xl">
+    <img id="lb-img" class="lb-img mx-auto shadow-2xl" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+    <figcaption class="mt-4 text-cream">
+      <p id="lb-title" class="font-display text-xl" style="font-weight:700"></p>
+      <p id="lb-note" class="font-editorial text-cream/75 text-sm mt-1"></p>
+    </figcaption>
+  </figure>
+</div>
+
+<!-- ══════════ 12 · CLUB MASA MADRE ══════════ -->
+<section id="club" class="py-20 md:py-28 bg-[#F4EDE1] border-y border-linework overflow-hidden" aria-labelledby="club-title">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="stamp-seal mb-4">Fidelidad</p>
+      <h2 id="club-title" class="font-display text-[clamp(1.9rem,4vw,3rem)] mb-6" style="font-weight:700">Tu pan de cada semana <span class="italic">tiene recompensa</span>.</h2>
+      <ul class="space-y-4 font-editorial text-cocoa/80 text-[16px] mb-8">
+        <li class="club-benefit flex gap-3 items-start"><svg class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="2.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Tarjeta digital en Apple Wallet y Google Wallet.</li>
+        <li class="club-benefit flex gap-3 items-start"><svg class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="2.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Por cada 9 hogazas compradas, la décima es de cortesía.</li>
+        <li class="club-benefit flex gap-3 items-start"><svg class="mt-1 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A8450" stroke-width="2.2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>10% en café al llevar termo propio.</li>
+      </ul>
+      <form id="club-form" class="flex flex-wrap gap-3 items-center" novalidate>
+        <label for="club-mail" class="sr-only">Correo para unirte al Club Masa Madre</label>
+        <input id="club-mail" type="email" required placeholder="tu@correo.mx" class="font-ui rounded-full border border-linework bg-paper px-5 py-3 w-full sm:w-72 focus:border-olive">
+        <button type="submit" class="btn-primary font-ui" data-track="club_signup">Unirme al Club Masa Madre</button>
+        <p id="club-ok" class="hidden w-full font-ui text-sm text-olive" role="status" style="font-weight:600">¡Listo! Te enviamos tu tarjeta digital del Club. 🥖</p>
+      </form>
+    </div>
+    <div class="grid grid-cols-5 gap-3 md:gap-4" id="club-stamps" aria-label="Tarjeta de sellos: nueve hogazas y la décima de cortesía"></div>
+  </div>
+</section>
+
+<!-- ══════════ 13 · GIFT CARDS ══════════ -->
+<section id="giftcards" class="py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="gift-title">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <p class="stamp-seal mb-4 mx-auto w-max">Regalos</p>
+    <h2 id="gift-title" class="font-display text-[clamp(1.9rem,4vw,3rem)] mb-4" style="font-weight:700">Regala una mañana <span class="italic">que se disfruta despacio</span>.</h2>
+    <p class="font-editorial text-cocoa/75 max-w-xl mx-auto mb-12">Gift Cards digitales de $300, $500 y $1,000 MXN. Envío por email con dedicatoria; canjeables en tienda física y tienda web.</p>
+    <div class="relative inline-block w-full max-w-md" id="gift-wrap">
+      <div class="mx-auto w-[86%] h-16 bg-[#E8D9BC] border border-linework rounded-b-2xl relative z-10" aria-hidden="true"></div>
+      <div id="gift-card" class="env-card relative z-0 -mt-8 mx-auto w-full rounded-kraftlg border-2 border-wheat bg-paper p-8 shadow-xl">
+        <svg class="mx-auto mb-4" width="46" height="46" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18.5" stroke="#3E2723" stroke-width="1.4"/><path d="M20 8v24M20 13c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2zm0 7c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2z" stroke="#D8A45F" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <p class="font-display text-2xl mb-1" style="font-weight:700">Gift Card Masa &amp; Trigo</p>
+        <p id="gift-amount" class="font-display text-5xl text-[#8a5a1f] mb-5" style="font-weight:700">$500</p>
+        <div class="flex justify-center gap-3 mb-7 font-ui text-sm" role="group" aria-label="Selecciona monto de Gift Card" style="font-weight:700">
+          <button class="gift-amt border border-linework rounded-full px-5 py-2 bg-cream hover:bg-wheat/30 transition" data-amt="300">$300</button>
+          <button class="gift-amt border border-cocoa rounded-full px-5 py-2 bg-wheat/40" data-amt="500" aria-pressed="true">$500</button>
+          <button class="gift-amt border border-linework rounded-full px-5 py-2 bg-cream hover:bg-wheat/30 transition" data-amt="1000">$1,000</button>
+        </div>
+        <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-primary font-ui justify-center w-full" data-track="click_gift_card">Elegir una Gift Card</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 14 · TESTIMONIOS ══════════ -->
+<section id="testimonios" class="py-20 md:py-28 bg-paper border-y border-linework overflow-hidden" aria-labelledby="test-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="stamp-seal mb-4">Palabras de vecinos</p>
+    <h2 id="test-title" class="font-display text-[clamp(1.9rem,4vw,3rem)] mb-12" style="font-weight:700">Notas que nos dejan <span class="italic">en el mostrador</span>.</h2>
+    <div class="grid md:grid-cols-3 gap-7">
+      <blockquote class="testi note-paper p-7 rotate-[-1deg]" data-anim="testi">
+        <svg class="stars mb-4" width="110" height="20" viewBox="0 0 110 20" fill="none" aria-label="Calificación: 5 estrellas"><g stroke="#D8A45F" stroke-width="1.4" stroke-linejoin="round"><path d="M10 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M32 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M54 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M76 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M98 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/></g></svg>
+        <p class="font-editorial text-cocoa/85 text-[15px] leading-relaxed mb-5">“La hogaza con semillas tiene una costra crujiente perfecta y una miga aireada e hidratada como pocas en la ciudad. El café de Chiapas en V60 es una joya.”</p>
+        <footer class="font-ui text-sm" style="font-weight:700">Sofía Cárdenas <span class="text-cocoa/60" style="font-weight:500">· Google Maps · 5 estrellas</span></footer>
+      </blockquote>
+      <blockquote class="testi note-paper p-7 rotate-[1.2deg]" data-anim="testi">
+        <svg class="stars mb-4" width="110" height="20" viewBox="0 0 110 20" fill="none" aria-label="Calificación: 5 estrellas"><g stroke="#D8A45F" stroke-width="1.4" stroke-linejoin="round"><path d="M10 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M32 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M54 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M76 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M98 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/></g></svg>
+        <p class="font-editorial text-cocoa/85 text-[15px] leading-relaxed mb-5">“El Basque Cheesecake de Masa &amp; Trigo es fuera de este mundo: cremoso, tostado al punto exacto y nada empalagoso. Además, su terraza en la Condesa es el rincón perfecto para leer.”</p>
+        <footer class="font-ui text-sm" style="font-weight:700">Diego Mendizábal <span class="text-cocoa/60" style="font-weight:500">· Google Maps · 5 estrellas</span></footer>
+      </blockquote>
+      <blockquote class="testi note-paper p-7 rotate-[-0.6deg]" data-anim="testi">
+        <svg class="stars mb-4" width="110" height="20" viewBox="0 0 110 20" fill="none" aria-label="Calificación: 5 estrellas"><g stroke="#D8A45F" stroke-width="1.4" stroke-linejoin="round"><path d="M10 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M32 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M54 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M76 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/><path d="M98 2l2.4 5 5.6.7-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.7z"/></g></svg>
+        <p class="font-editorial text-cocoa/85 text-[15px] leading-relaxed mb-5">“Pedimos el pastel para el cumpleaños de mi esposa con estilo rústico y flores naturales; no solo lucía espectacular sino que el sabor a pistache y frambuesa conquistó a todos.”</p>
+        <footer class="font-ui text-sm" style="font-weight:700">Mariana Echeverría <span class="text-cocoa/60" style="font-weight:500">· Facebook · 5 estrellas</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 15 · REDES ══════════ -->
+<section id="social" class="py-20 md:py-24 bg-cream overflow-hidden" aria-labelledby="social-title">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-10">
+      <h2 id="social-title" class="font-display text-[clamp(1.8rem,3.6vw,2.6rem)]" style="font-weight:700">Recién salido del horno <span class="italic">@masaytrigomx</span></h2>
+      <div class="flex gap-3 font-ui text-sm" style="font-weight:700">
+        <a href="https://instagram.com/masaytrigomx" target="_blank" rel="noopener" class="btn-ghost !py-2 !px-4" data-track="instagram_click">Instagram</a>
+        <a href="https://tiktok.com/@masaytrigomx" target="_blank" rel="noopener" class="btn-ghost !py-2 !px-4" data-track="tiktok_click">TikTok</a>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-3" id="social-grid"></div>
+    <p class="mt-5 font-ui text-xs text-cocoa/60">Bread ASMR, greñado, horneado de las 08:00, vitrina matutina, menú de temporada y tips de conservación de pan.</p>
+  </div>
+</section>
+
+<!-- ══════════ 16 · UBICACIÓN Y HORARIOS ══════════ -->
+<section id="visitanos" class="py-20 md:py-28 bg-paper border-y border-linework overflow-hidden" aria-labelledby="visit-title">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
+    <div>
+      <p class="stamp-seal mb-4">Capítulo final · La mesa</p>
+      <h2 id="visit-title" class="font-display text-[clamp(1.9rem,4vw,3rem)] mb-6" style="font-weight:700">Una pausa tibia en el corazón de <span class="italic">Condesa</span>.</h2>
+      <address class="not-italic font-editorial text-cocoa/80 text-[16px] leading-relaxed mb-6">
+        Calle Fernando Montes de Oca 84, Local A,<br>Col. Condesa, Alcaldía Cuauhtémoc,<br>Ciudad de México, CDMX, C.P. 06140.
+      </address>
+      <p class="font-ui text-sm text-cocoa/70 mb-8">Esquina con Vicente Suárez, a 3 cuadras del Parque España y a 5 minutos caminando del Metro Chapultepec. Parquímetro en calle y estacionamiento público enfrente.</p>
+      <div id="hours-table" class="font-ui text-sm mb-8 divide-y divide-linework border-y border-linework">
+        <div class="hours-row flex justify-between py-3"><span style="font-weight:600">Martes a sábado</span><span>07:30 – 20:30 hrs</span></div>
+        <div class="hours-row flex justify-between py-3"><span style="font-weight:600">Domingo</span><span>08:30 – 17:00 hrs</span></div>
+        <div class="hours-row flex justify-between py-3"><span style="font-weight:600">Lunes</span><span class="text-olive" style="font-weight:600">Cerrado · mantenimiento y producción base</span></div>
+      </div>
+      <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 font-ui text-[13.5px] text-cocoa/75 mb-9">
+        <li>· Salón para 24 comensales</li><li>· Terraza pet-friendly para 16</li>
+        <li>· Wi-Fi de alta velocidad</li><li>· Enchufes para laptops</li>
+        <li>· Baño adaptado</li><li>· Bebedero para mascotas</li>
+        <li>· Estacionamiento de bicis con candados de cortesía</li><li>· Rampa a nivel de banqueta y puerta ancha</li>
+      </ul>
+      <a href="https://maps.google.com/?q=Masa+Trigo+Panaderia+Condesa" target="_blank" rel="noopener" class="btn-primary font-ui" data-track="click_google_maps">Abrir Google Maps
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></a>
+    </div>
+    <div id="map-card" class="rounded-kraftlg overflow-hidden border border-linework shadow-lg bg-cream min-h-[380px]" style="transform-origin:top center">
+      <iframe id="map-frame" title="Mapa de ubicación de Masa & Trigo en Condesa" data-src="https://www.google.com/maps?q=Masa+Trigo+Panaderia+Condesa&output=embed" class="w-full h-full min-h-[380px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 17 · FAQ ══════════ -->
+<section id="faq" class="py-20 md:py-28 bg-cream overflow-hidden" aria-labelledby="faq-title">
+  <div class="max-w-4xl mx-auto px-4">
+    <p class="stamp-seal mb-4">Dudas de mostrador</p>
+    <h2 id="faq-title" class="font-display text-[clamp(1.9rem,4vw,3rem)] mb-10" style="font-weight:700">Preguntas <span class="italic">frecuentes</span>.</h2>
+    <div id="faq-list" class="divide-y divide-linework border-y border-linework"></div>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="py-20 md:py-28 bg-cocoa text-cream text-center overflow-hidden" aria-labelledby="final-cta">
+  <div class="max-w-3xl mx-auto px-4">
+    <svg class="mx-auto mb-6 opacity-80" width="52" height="52" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18.5" stroke="#D8A45F" stroke-width="1.4"/><path d="M20 8v24M20 13c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2zm0 7c-3.6-1.2-6-3.6-6-7.2 3.6 0 6 2.4 6 7.2zm0 0c3.6-1.2 6-3.6 6-7.2-3.6 0-6 2.4-6 7.2z" stroke="#D8A45F" stroke-width="1.4" stroke-linecap="round"/></svg>
+    <h2 id="final-cta" class="font-display text-[clamp(2rem,4.6vw,3.4rem)] mb-6" style="font-weight:700">El horno ya está caliente. <span class="italic text-wheat">Te esperamos.</span></h2>
+    <p class="font-editorial text-cream/75 mb-9">Ordena hoy antes de las 14:00 hrs y recoge tu pan tibio esta misma tarde en Condesa.</p>
+    <a href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener" class="btn-primary font-ui text-base" data-track="click_order_hero">Ordena tu Pan en Línea
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+  </div>
+</section>
+</main>
+
+<!-- ══════════ 18 · FOOTER ══════════ -->
+<footer class="bg-[#2c1b16] text-cream/80 pt-16 pb-10 font-ui text-sm">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10 mb-12">
+    <div>
+      <p class="font-display text-xl text-cream mb-3" style="font-weight:700">Masa &amp; Trigo</p>
+      <p class="text-cream/65 leading-relaxed mb-4">Panificadora Artesanal de la Condesa S.A. de C.V.<br>Calle Fernando Montes de Oca 84, Local A, Col. Condesa, Alcaldía Cuauhtémoc, CDMX, C.P. 06140.</p>
+      <p class="space-y-1">
+        <a class="block hover:text-wheat transition" href="tel:+525552119084">Tel. +52 55 5211 9084</a>
+        <a class="block hover:text-wheat transition" href="https://wa.me/525534901288" target="_blank" rel="noopener">WhatsApp +52 55 3490 1288</a>
+        <a class="block hover:text-wheat transition" href="mailto:hola@masaytrigo.com.mx">hola@masaytrigo.com.mx</a>
+      </p>
+    </div>
+    <nav aria-label="Enlaces del sitio">
+      <p class="text-cream mb-3" style="font-weight:700">Explora</p>
+      <ul class="space-y-2">
+        <li><a class="hover:text-wheat transition" href="#menu">Menú del día</a></li>
+        <li><a class="hover:text-wheat transition" href="#eventos">Pasteles y eventos</a></li>
+        <li><a class="hover:text-wheat transition" href="#club">Club Masa Madre</a></li>
+        <li><a class="hover:text-wheat transition" href="#giftcards">Gift Cards</a></li>
+        <li><a class="hover:text-wheat transition" href="https://masaytrigo.tiendanube.com" target="_blank" rel="noopener">Tienda en línea</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="text-cream mb-3" style="font-weight:700">Síguenos</p>
+      <ul class="space-y-2">
+        <li><a class="hover:text-wheat transition" href="https://instagram.com/masaytrigomx" target="_blank" rel="noopener" data-track="instagram_click">Instagram</a></li>
+        <li><a class="hover:text-wheat transition" href="https://facebook.com/masaytrigomx" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="hover:text-wheat transition" href="https://tiktok.com/@masaytrigomx" target="_blank" rel="noopener" data-track="tiktok_click">TikTok</a></li>
+        <li><a class="hover:text-wheat transition" href="https://youtube.com/@masaytrigomx" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a class="hover:text-wheat transition" href="https://pinterest.com/masaytrigomx" target="_blank" rel="noopener">Pinterest</a></li>
+        <li><a class="hover:text-wheat transition" href="https://maps.google.com/?cid=7491028374619283746" target="_blank" rel="noopener">Google Business Profile</a></li>
+      </ul>
+    </div>
+    <div class="space-y-3">
+      <p class="text-cream mb-1" style="font-weight:700">Políticas</p>
+      <details class="group"><summary class="cursor-pointer hover:text-wheat transition">Aviso de privacidad</summary>
+        <p class="mt-2 text-cream/60 text-[13px] leading-relaxed">Responsable: Panificadora Artesanal de la Condesa S.A. de C.V. Los datos de formularios (nombre, teléfono, correo, tipo de evento, fecha, comensales y estilo) se usan para cotización, gestión de pedidos, contacto y logística de entrega o recogida. La suscripción al Club o novedades requiere consentimiento separado. Puedes ejercer tus derechos ARCO escribiendo a hola@masaytrigo.com.mx.</p></details>
+      <details class="group"><summary class="cursor-pointer hover:text-wheat transition">Política de pedidos</summary>
+        <p class="mt-2 text-cream/60 text-[13px] leading-relaxed">Pan y galletas: 3 a 4 h o mismo día según existencia. Pasteles estándar: 24 h. Personalizados y bodas: 5 a 7 días. Catering: 10 días hábiles. Anticipo 50% en personalizados; cambios con mínimo 24 h; liquidación 48 h antes en pedidos grandes; cancelación sin penalización con 4 días de anticipación en eventos grandes.</p></details>
+      <details class="group"><summary class="cursor-pointer hover:text-wheat transition">Política de entregas</summary>
+        <p class="mt-2 text-cream/60 text-[13px] leading-relaxed">Click &amp; Collect sin fila en mostrador. Entrega en bici y auto climatizado en Condesa, Roma N/S, Juárez, Cuauhtémoc, Polanco, San Miguel Chapultepec, Del Valle Norte y Escandón. Tarifa fija $60 MXN en radio de 5 km; gratis desde $650 MXN. Zonas lejanas por mensajería especializada.</p></details>
+      <details class="group"><summary class="cursor-pointer hover:text-wheat transition">Política de alérgenos</summary>
+        <p class="mt-2 text-cream/60 text-[13px] leading-relaxed">Etiquetamos los alérgenos principales: gluten, lácteos, huevo, frutos secos y sésamo. Todo el obrador manipula harina de trigo; por ello puede existir contaminación cruzada involuntaria, incluso en productos sin gluten. Si tienes alergia severa o antecedente de anafilaxia, consulta antes de consumir.</p></details>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 border-t border-cream/15 pt-7 space-y-3 text-[12.5px] text-cream/55">
+    <p>Elaboramos nuestros productos bajo prácticas de higiene y manejo de alimentos acordes con la NOM-251-SSA1-2009.</p>
+    <p>En nuestro obrador se manipulan gluten, lácteos, huevo, nueces, almendras, avellanas y sésamo. Aunque aplicamos medidas de control, puede existir contaminación cruzada; consulta al equipo si tienes una alergia severa.</p>
+    <p>© 2026 Panificadora Artesanal de la Condesa S.A. de C.V. · Masa &amp; Trigo — El tiempo perfecto hace al pan honesto.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-float" href="https://wa.me/525534901288?text=Hola%20Masa%20%26%20Trigo!%20Quiero%20consultar%20la%20disponibilidad%20del%20pan%20del%20d%C3%ADa%20y%20encargar%20un%20pedido%20para%20entrega%2Frecogida." target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" data-track="click_whatsapp_order">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.2.5.3.6.4 0 .2 0 .8-.3 1.4z"/></svg>
+</a>
+
+<div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Popup suscripción -->
+<div id="popup" role="dialog" aria-modal="false" aria-labelledby="popup-title" class="modal-sheet" hidden>
+  <div class="rounded-kraftlg border-2 border-wheat bg-cream shadow-2xl p-7 relative">
+    <button id="popup-close" class="absolute top-3 right-3 p-2 rounded-full hover:bg-wheat/20 transition" aria-label="Cerrar ventana de suscripción">
+      <svg width="18" height="18" viewBox="0 0 24 24" stroke="#3E2723" stroke-width="2" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <svg id="popup-wheat" class="mb-3" width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6v28M20 12c-4-1.3-6.6-4-6.6-8 4 0 6.6 2.7 6.6 8zm0 0c4-1.3 6.6-4 6.6-8-4 0-6.6 2.7-6.6 8zm0 8c-4-1.3-6.6-4-6.6-8 4 0 6.6 2.7 6.6 8zm0 0c4-1.3 6.6-4 6.6-8-4 0-6.6 2.7-6.6 8z" stroke="#D8A45F" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <h2 id="popup-title" class="font-display text-2xl mb-2" style="font-weight:700">¿Amas el pan recién horneado?</h2>
+    <p class="font-editorial text-sm text-cocoa/80 mb-5">Suscríbete y te regalamos un café americano o espresso en la compra de tu primera hogaza en tienda.</p>
+    <form id="popup-form" novalidate class="space-y-3 font-ui text-sm">
+      <div><label for="pp-nombre" class="block mb-1" style="font-weight:600">Nombre</label>
+        <input id="pp-nombre" type="text" required class="w-full rounded-xl border border-linework bg-paper px-4 py-2.5 focus:border-olive"></div>
+      <div><label for="pp-mail" class="block mb-1" style="font-weight:600">Email</label>
+        <input id="pp-mail" type="email" required class="w-full rounded-xl border border-linework bg-paper px-4 py-2.5 focus:border-olive"></div>
+      <label class="flex items-start gap-2 text-[12px] text-cocoa/70">
+        <input id="pp-consent" type="checkbox" required class="mt-0.5 accent-[#7A8450]">
+        <span>He leído y acepto el aviso de privacidad del pie de página.</span>
+      </label>
+      <button type="submit" class="btn-primary font-ui w-full justify-center !py-3" data-track="popup_subscribed">Quiero mi café de bienvenida</button>
+      <p id="popup-ok" class="hidden text-olive text-[13px]" role="status" style="font-weight:600">¡Listo! Muestra este mensaje en caja con tu primera hogaza. ☕</p>
+    </form>
+  </div>
+</div>
+
+<!-- Cookies -->
+<div id="cookies" role="region" aria-label="Preferencias de cookies" class="rounded-kraftlg border border-linework bg-paper shadow-2xl p-6 font-ui text-sm" hidden>
+  <p class="mb-2" style="font-weight:700">Cookies con consentimiento</p>
+  <p class="text-cocoa/70 text-[13px] mb-4">Usamos cookies técnicas esenciales. Las de analítica y marketing solo se activan con tu permiso.</p>
+  <div id="cookie-config" class="hidden space-y-2 mb-4 text-[13px]">
+    <label class="flex items-center gap-2"><input type="checkbox" checked disabled class="accent-[#7A8450]"> Necesarias (siempre)</label>
+    <label class="flex items-center gap-2"><input id="ck-analytics" type="checkbox" checked class="accent-[#7A8450]"> Analítica (GA4 / GTM)</label>
+    <label class="flex items-center gap-2"><input id="ck-marketing" type="checkbox" class="accent-[#7A8450]"> Marketing (Meta Pixel)</label>
+    <button id="ck-save" class="font-600 underline underline-offset-4 text-[13px] mt-1" style="font-weight:600">Guardar preferencias</button>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <button id="ck-accept" class="btn-primary !py-2 !px-4 text-[13px]">Aceptar</button>
+    <button id="ck-reject" class="btn-ghost !py-2 !px-4 text-[13px]">Rechazar</button>
+    <button id="ck-config" class="underline underline-offset-4 text-[13px]" aria-expanded="false" aria-controls="cookie-config" style="font-weight:600">Configurar</button>
+  </div>
+</div>
+
+<script>
+/* ═══════════ SEGURIDAD VISUAL: nada queda tapando el sitio ═══════════ */
+document.body.classList.remove('no-js-safe');
+document.addEventListener('error', function(e){
+  var el = e.target;
+  if (el && el.tagName === 'IMG' && el.dataset.fallbackDone !== '1'){
+    el.dataset.fallbackDone = '1';
+    el.src = 'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/13033b9db-eda2-40ba-8b7f-893f06bd5df1.png';
+  }
+}, true);
+
+/* ═══════════ DATOS CENTRALIZADOS ═══════════ */
+const MT = {
+  TIENDANUBE: 'https://masaytrigo.tiendanube.com',
+  WHATSAPP: '525534901288',
+  IMG: {
+    hero:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/13033b9db-eda2-40ba-8b7f-893f06bd5df1.png',
+    croissant:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/10e1ef9b7-36d1-46d9-8947-3a64e76fa573.png',
+    croissantTorn:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1d3cf0661-f5be-4902-85a3-545629597c23.png',
+    hogazaCorte:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/11688d619-8861-4ea5-aa8d-4ed91ea83c25.png',
+    basque:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/131507680-7796-412c-9d0b-36874876e6dc.png',
+    tarta:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1941c51c4-e844-4a3f-a48f-9cb30bd3374b.png',
+    galleta:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/12d4a148e-eb61-4f6e-8096-9e02af15014b.png',
+    roll:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1fd588320-c381-4248-9170-a2462bec0ec3.png',
+    painChoc:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/10588b6ec-58ff-436e-9844-6a68b92adf9d.png',
+    hogaza:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1277eecdb-6c7b-46c4-97c7-3126a7520927.png',
+    focaccia:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1341bdac5-35ce-46fa-96ff-d46addd6b465.png',
+    boleado:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/16bcdfba7-53b0-498e-94f4-3c88008e598d.png',
+    grenado:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1f8fcdc4b-7e15-411b-b3e2-27610a9cec6e.png',
+    banneton:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/11892a25f-3876-4460-a9f7-1189ae868f86.png',
+    laminado:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1fa9574d1-8d57-4167-a772-4909c1c02b5e.png',
+    espolvoreado:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1580b464d-f094-4c7b-985b-9bee6dbdfc20.png',
+    fachada:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/113b75d36-ec41-4b59-8faf-796423f28683.png',
+    vitrina:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/17d813b96-42f9-4b0d-8657-3b406922e8ab.png',
+    barraCafe:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/18bf21002-d1f4-4c1b-b57c-f47bd522f889.png',
+    estanteria:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/10c64124a-c38d-47a3-81b8-923bdd7ac440.png',
+    horno:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/19caf6514-4043-4b7d-ab80-c02bb0ce80c2.png',
+    bruno:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1862794cd-0ad0-4c83-8f83-f1e6051c38a5.png',
+    paulina:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1842640ab-bf4a-4c1b-880f-2b9f4a6e1c3d.png',
+    equipo:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/1a47d1a2b-2b9f-41ac-8550-f438f4eb4807.png',
+    panMuerto:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/187eeb191-04fb-4c63-9850-67091eb3af1f.png',
+    naked:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/16abe310f-50eb-4a5e-a64e-4e4589a197ed.png',
+    mesaPostres:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/131c8076b-8d96-4e29-90e4-d559f372c7f2.png',
+    terraza:'https://image.qwenlm.ai/public_source/12b9bb32-5b15-44ea-bdbe-52b942550dd9/17738429a-ce44-4dc9-9e4f-6e06f7e300b4.png'
+  }
+};
+const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (RM) document.documentElement.classList.add('rm');
+window.dataLayer = window.dataLayer || [];
+function track(ev, p){ window.dataLayer.push(Object.assign({ event: ev }, p || {})); }
+document.addEventListener('click', function(e){
+  const t = e.target.closest('[data-track]');
+  if (t) track(t.getAttribute('data-track'), { href: t.getAttribute('href') || null });
+});
+
+/* ═══════════ BARRA DE ESTADO ═══════════ */
+(function(){
+  const HOURS = {0:[8.5,17], 1:null, 2:[7.5,20.5], 3:[7.5,20.5], 4:[7.5,20.5], 5:[7.5,20.5], 6:[7.5,20.5]};
+  const fmt = h => { const hh=Math.floor(h), mm=Math.round((h-hh)*60); return String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0'); };
+  const now = new Date(), d = now.getDay(), t = now.getHours()+now.getMinutes()/60, today = HOURS[d];
+  const dot = document.getElementById('status-dot'), txt = document.getElementById('status-text');
+  let msg, open = false;
+  if (today === null){ msg = 'Hoy el obrador descansa para preparar la próxima hornada'; }
+  else if (t < today[0]){ msg = 'Cerrado ahora · Abrimos hoy a las '+fmt(today[0])+' hrs'; }
+  else if (t < today[1]){ open = true; msg = 'Horneando hoy · Abierto de '+fmt(today[0])+' a '+fmt(today[1])+' hrs'; }
+  else { const nx = HOURS[(d+1)%7]; msg = 'Cerrado por hoy · Abrimos '+(nx?'mañana':'el martes')+' a las '+(nx?fmt(nx[0]):'07:30')+' hrs'; }
+  txt.textContent = msg;
+  dot.style.background = open ? '#9DB06A' : '#D8A45F';
+})();
+
+/* ═══════════ HEADER ═══════════ */
+(function(){
+  const header = document.getElementById('header');
+  const onScroll = () => {
+    if (window.scrollY > 60){ header.classList.add('shadow-md','bg-cream/95'); header.classList.remove('bg-cream/70'); }
+    else { header.classList.remove('shadow-md','bg-cream/95'); header.classList.add('bg-cream/70'); }
+  };
+  window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  const btn = document.getElementById('menu-btn'), panel = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open)); panel.hidden = open;
+    if (!open) panel.querySelector('a').focus();
+  });
+  panel.addEventListener('click', e => { if (e.target.closest('.mob-link')){ panel.hidden = true; btn.setAttribute('aria-expanded','false'); } });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden){ panel.hidden = true; btn.setAttribute('aria-expanded','false'); btn.focus(); } });
+})();
+
+/* ═══════════ CANVAS: HARINA EN SUSPENSIÓN + CALOR ═══════════ */
+(function(){
+  const cv = document.getElementById('flour-canvas');
+  if (RM || !cv) return;
+  const ctx = cv.getContext('2d');
+  let W=0, H=0, dpr=Math.min(window.devicePixelRatio||1, 1.75), parts=[], waves=[], running=true, visible=true, scrollP=0;
+  function resize(){
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n = window.innerWidth < 768 ? 26 : 60;
+    parts = Array.from({length:n}, () => ({ x:Math.random()*W, y:H+Math.random()*H*0.4, r:0.6+Math.random()*2.1, s:0.12+Math.random()*0.4, a:0.12+Math.random()*0.4, w:Math.random()*Math.PI*2 }));
+    waves = [0,1,2].map(i => ({ off:i*40, amp:14+i*8, sp:0.00035+i*0.00012 }));
+  }
+  resize(); window.addEventListener('resize', resize);
+  new IntersectionObserver(en => { visible = en[0].isIntersecting; }, { threshold:0 }).observe(cv);
+  document.addEventListener('visibilitychange', () => { running = !document.hidden; });
+  window.addEventListener('scroll', () => {
+    const r = cv.getBoundingClientRect();
+    scrollP = Math.min(1, Math.max(0, -r.top / (r.height*0.9)));
+  }, { passive:true });
+  let last = performance.now();
+  function loop(now){
+    requestAnimationFrame(loop);
+    if (!running || !visible) return;
+    const dt = Math.min(48, now-last); last = now;
+    ctx.clearRect(0,0,W,H);
+    ctx.globalAlpha = 1 - scrollP*0.75;
+    for (const p of parts){
+      p.y -= p.s*dt*0.06*(1+scrollP*1.6); p.w += 0.0012*dt; p.x += Math.sin(p.w)*0.16;
+      if (p.y < -8){ p.y = H+8; p.x = Math.random()*W; }
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fillStyle = 'rgba(216,164,95,'+(p.a*0.55)+')'; ctx.fill();
+      ctx.beginPath(); ctx.arc(p.x+2, p.y+2, p.r*0.6, 0, 6.2832); ctx.fillStyle = 'rgba(255,253,248,'+(p.a*0.5)+')'; ctx.fill();
+    }
+    for (const wv of waves){
+      ctx.beginPath();
+      for (let x=0; x<=W*0.5; x+=8){
+        const y = H - 40 - wv.off - Math.sin(x*0.012 + now*wv.sp)*wv.amp - (H*0.18)*(x/(W*0.5));
+        x===0 ? ctx.moveTo(W*0.55+x, y) : ctx.lineTo(W*0.55+x, y);
+      }
+      ctx.strokeStyle = 'rgba(216,164,95,0.10)'; ctx.lineWidth = 1.4; ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* ═══════════ MENÚ ═══════════ */
+const MENU = [
+ { id:'masa-madre', label:'Panadería de Masa Madre', note:'Hogazas $110 – $145 MXN · Sujeto a horneado diario', items:[
+   { n:'Hogaza Campesina tradicional', p:'$110 – $145', num:110, u:'400 g / 800 g', d:'Corteza profunda y miga húmeda con notas de avellana tostada.', i:'Harina agroecológica molida a la piedra, agua, sal de mar, masa madre.', a:['Gluten'], img:'hogaza' },
+   { n:'Hogaza de Masa Madre con Semillas y Granos Ancestrales', p:'$110 – $145', num:110, u:'400 g / 800 g', d:'Semillas tostadas y granos ancestrales en cada rebanada.', i:'Amaranto, ajonjolí, linaza, avena integral, masa madre.', a:['Gluten','Sésamo'], img:'hogazaCorte' },
+   { n:'Baguette rústica tradicional', p:'$65', num:65, u:'pieza', d:'Corteza que canta y miga ligera; sale del segundo horneado.', i:'Trigo, agua, sal, masa madre.', a:['Gluten'], img:'estanteria', note:'Segundo horneado 12:30 hrs' },
+   { n:'Pan de centeno oscuro al estilo alemán', p:'$140', num:140, u:'800 g', d:'Denso, húmedo y ligeramente dulce; reposa 24 h antes de cortar.', i:'Centeno integral, masa madre de centeno, melaza, sal.', a:['Gluten'], img:'hogaza' },
+   { n:'Focaccia genovesa con romero, AOVE y jitomates cherry confitados', p:'$120', num:120, u:'porción familiar', d:'Alveolos brillantes, aceite de oliva y acidez dulce del cherry.', i:'Trigo, aceite de oliva virgen extra, romero fresco, jitomate cherry.', a:['Gluten'], img:'focaccia', note:'Segundo horneado 12:30 hrs' } ]},
+ { id:'bolleria', label:'Bollería Fina y Hojaldres', note:'$45 – $75 MXN · Laminado en obrador con mantequilla francesa', items:[
+   { n:'Croissant clásico de mantequilla francesa', p:'$55', num:55, u:'pieza', d:'Capas que crujen, centro alveolado y perfume de mantequilla.', i:'Trigo, mantequilla francesa 84%, leche, huevo, levadura.', a:['Gluten','Lácteos','Huevo'], img:'croissant' },
+   { n:'Pain au Chocolat con chocolate amargo 70%', p:'$65', num:65, u:'pieza', d:'Hojaldre luminoso con dos barras de cacao amargo.', i:'Trigo, mantequilla, chocolate 70%, leche.', a:['Gluten','Lácteos'], img:'painChoc' },
+   { n:'Cruffin relleno de crema de avellanas', p:'$70', num:70, u:'pieza', d:'Espiral hojaldrada con corazón cremoso de avellana.', i:'Trigo, mantequilla, avellanas, azúcar, leche.', a:['Gluten','Lácteos','Frutos secos'], img:'vitrina' },
+   { n:'Roll de canela con glaseado de cardamomo', p:'$60', num:60, u:'pieza', d:'Esponjoso, especiado y con glaseado tibio de cardamomo.', i:'Trigo, canela de Ceilán, cardamomo, mantequilla, huevo.', a:['Gluten','Lácteos','Huevo'], img:'roll' },
+   { n:'Kouign-amann caramelizado', p:'$75', num:75, u:'pieza', d:'Caramelo ámbar, hojaldre denso y sal de mar.', i:'Trigo, mantequilla, azúcar caramelizada, sal de mar.', a:['Gluten','Lácteos'], img:'vitrina' } ]},
+ { id:'pasteleria', label:'Pastelería y Tartas de Vitrina', note:'Rebanadas $85 – $115 · Pasteles completos $480 – $850 MXN', items:[
+   { n:'Tarta de frambuesas frescas y crema de mascarpone', p:'$95', num:95, u:'rebanada', d:'Fruta brillante sobre crema ligera de mascarpone.', i:'Frambuesa, mascarpone, trigo, huevo, mantequilla.', a:['Gluten','Lácteos','Huevo'], img:'tarta' },
+   { n:'Basque Burnt Cheesecake tradicional', p:'$95', num:95, u:'rebanada · entero $520', d:'Superficie caramelizada y corazón cremoso de dulzor equilibrado.', i:'Queso crema, crema, huevo, azúcar.', a:['Lácteos','Huevo'], img:'basque' },
+   { n:'Tarta de limón eureka y merengue tostado', p:'$90', num:90, u:'rebanada', d:'Acidez viva de limón eureka bajo merengue flameado.', i:'Limón eureka, trigo, mantequilla, huevo, azúcar.', a:['Gluten','Lácteos','Huevo'], img:'mesaPostres' },
+   { n:'Pastel de zanahoria especiado con nuez pecana', p:'$85', num:85, u:'rebanada', d:'Especias cálidas, nuez tostada y frosting de queso crema.', i:'Zanahoria, nuez pecana, trigo, huevo, queso crema.', a:['Gluten','Lácteos','Huevo','Frutos secos'], img:'naked' },
+   { n:'Opera de café de especialidad y ganache de cacao', p:'$115', num:115, u:'rebanada', d:'Capas finas de bizcocho, café de la casa y ganache amargo.', i:'Café de especialidad, cacao, almendra, huevo, mantequilla.', a:['Gluten','Lácteos','Huevo','Frutos secos'], img:'basque' } ]},
+ { id:'pasteles', label:'Pasteles de Ocasión y Eventos', note:'Pasteles completos $480 – $850 MXN · Cotizaciones con 24 h – 10 días', items:[
+   { n:'Pastel de celebración naked cake con flores orgánicas', p:'$480 – $850', num:480, u:'según tamaño', d:'Texturas naturales en buttercream y flores comestibles. Sin fondant.', i:'Trigo, huevo, lácteos, flores comestibles de temporada.', a:['Gluten','Lácteos','Huevo'], img:'naked' },
+   { n:'Basque Burnt Cheesecake entero', p:'$520', num:520, u:'entero', d:'El clásico de la casa en formato de celebración.', i:'Queso crema, crema, huevo, azúcar.', a:['Lácteos','Huevo'], img:'basque' },
+   { n:'Mesa de postres rústica (20 – 150 personas)', p:'Cotización', u:'evento', d:'Tartas, mini cheesecakes y bollería en montaje de madera y lino.', i:'Según selección de vitrina de la semana.', a:['Gluten','Lácteos','Huevo','Frutos secos','Sésamo'], img:'mesaPostres' },
+   { n:'Caja surtida de bollería para empresas', p:'Cotización', u:'20 – 150 pzas', d:'Croissants, pains au chocolat y galletas para reuniones matutinas.', i:'Bollería laminada del día.', a:['Gluten','Lácteos','Huevo','Frutos secos'], img:'vitrina' } ]},
+ { id:'cafe', label:'Despensa Artesanal y Café', note:'Bebidas $45 – $80 · Galletas y dulces $40 – $55 MXN', items:[
+   { n:'Espresso · Flat White · Latte', p:'$45 – $55', num:45, u:'vaso', d:'Café de origen mexicano con leche cremosa o leches vegetales sin costo extra.', i:'Café de Oaxaca y Chiapas, leche o bebida vegetal.', a:['Lácteos (opcional)'], img:'barraCafe' },
+   { n:'V60 y Chemex de origen', p:'$70 – $80', num:70, u:'taza', d:'Métodos de filtrado que destacan notas de fruto y cacao.', i:'Café de especialidad de Oaxaca y Chiapas.', a:[], img:'terraza' },
+   { n:'Cold brew infusionado 16 horas', p:'$65', num:65, u:'vaso', d:'Extracción en frío, dulce natural y final limpio.', i:'Café de especialidad, agua filtrada.', a:[], img:'barraCafe' },
+   { n:'Matcha orgánico ceremonial y tisanas mexicanas', p:'$50 – $70', num:50, u:'taza', d:'Matcha batido a mano o infusiones de hierbas locales.', i:'Matcha ceremonial, manzanilla, menta, cedrón.', a:[], img:'terraza' },
+   { n:'Galleta estilo Nueva York con chispas de chocolate y sal de Colima', p:'$45', num:45, u:'pieza', d:'Bordes crujientes, centro chewy y sal en escamas.', i:'Trigo, mantequilla, chocolate, sal de Colima, huevo.', a:['Gluten','Lácteos','Huevo'], img:'galleta' },
+   { n:'Financiers de almendra y pistache', p:'$50', num:50, u:'2 pzas', d:'Miga húmeda de mantequilla noisette y pistache tostado.', i:'Almendra, pistache, mantequilla, claras.', a:['Gluten','Lácteos','Huevo','Frutos secos'], img:'mesaPostres' },
+   { n:'Madeleines glaseadas con naranja y miel pura', p:'$45', num:45, u:'2 pzas', d:'Concha dorada y glaseado cítrico brillante.', i:'Trigo, huevo, mantequilla, naranja, miel pura.', a:['Gluten','Lácteos','Huevo'], img:'vitrina' },
+   { n:'Granola, mermeladas de temporada y mantequilla batida', p:'$95 – $180', num:95, u:'frasco', d:'Despensa de obrador para llevar la mañana a casa.', i:'Avena, frutos secos, fruta de temporada, sal de mar.', a:['Frutos secos','Lácteos','Gluten'], img:'estanteria' } ]}
+];
+
+(function renderMenu(){
+  const row = document.getElementById('tabs-row'), panels = document.getElementById('menu-panels');
+  MENU.forEach((cat, idx) => {
+    const b = document.createElement('button');
+    b.className = 'tab-btn font-ui text-[13.5px]'; b.id = 'tab-'+cat.id;
+    b.setAttribute('role','tab'); b.setAttribute('aria-selected', idx===0 ? 'true':'false');
+    b.setAttribute('aria-controls','panel-'+cat.id); b.dataset.tab = cat.id; b.textContent = cat.label;
+    row.appendChild(b);
+    const panel = document.createElement('div');
+    panel.id = 'panel-'+cat.id;
+    panel.setAttribute('role','tabpanel'); panel.setAttribute('aria-labelledby','tab-'+cat.id); panel.hidden = idx!==0;
+    panel.innerHTML = '<p class="font-ui text-[13px] text-cocoa/65 mb-6">'+cat.note+' · Etiquetamos alérgenos: gluten, lácteos, huevo, frutos secos y sésamo.</p>' +
+      '<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">' + cat.items.map(it =>
+        '<article class="menu-card card-kraft" data-anim="menu-card">'+
+          '<div class="ph h-44"><img src="'+MT.IMG[it.img]+'" alt="'+it.n+'" loading="lazy" width="512" height="512" class="w-full h-full object-cover"></div>'+
+          '<div class="p-6">'+
+            '<div class="flex items-start justify-between gap-3 mb-2"><h3 class="font-display text-[19px] leading-snug" style="font-weight:700">'+it.n+'</h3>'+
+            '<p class="font-ui text-[#8a5a1f] whitespace-nowrap price" data-num="'+(it.num||'')+'" style="font-weight:700">'+it.p+'</p></div>'+
+            '<p class="font-editorial text-[14px] text-cocoa/75 mb-2">'+it.d+'</p>'+
+            '<p class="font-ui text-[12px] text-cocoa/60 mb-3">'+it.i+' · <span style="font-weight:600">'+it.u+'</span></p>'+
+            (it.a.length ? '<ul class="flex flex-wrap gap-1.5 mb-3" aria-label="Alérgenos">'+it.a.map(a=>'<li class="chip"><i aria-hidden="true"></i>'+a+'</li>').join('')+'</ul>' : '<p class="font-ui text-[12px] text-olive mb-3">Sin alérgenos principales añadidos</p>')+
+            (it.note ? '<p class="font-ui text-[11.5px] text-olive mb-3">⏱ '+it.note+' · Sujeto a horneado diario</p>' : '<p class="font-ui text-[11.5px] text-cocoa/55 mb-3">Sujeto a horneado diario</p>')+
+            '<a href="'+MT.TIENDANUBE+'" target="_blank" rel="noopener" class="font-ui text-[13px] underline underline-offset-4 text-cocoa hover:text-[#8a5a1f] transition" style="font-weight:700" data-track="click_order_menu">Ordenar en línea</a>'+
+          '</div></article>').join('') + '</div>';
+    panels.appendChild(panel);
+  });
+  const trail = document.getElementById('tab-trail');
+  function moveTrail(btn){ if (!btn) return; trail.style.width = btn.offsetWidth+'px'; trail.style.left = btn.offsetLeft+'px'; }
+  function select(id, animate){
+    const btn = document.getElementById('tab-'+id);
+    MENU.forEach(c => {
+      document.getElementById('tab-'+c.id).setAttribute('aria-selected', String(c.id===id));
+      document.getElementById('panel-'+c.id).hidden = c.id!==id;
+    });
+    moveTrail(btn); track('menu_category_selected', { category:id });
+    if (animate && window.gsap && !RM){
+      gsap.fromTo('#panel-'+id+' .menu-card', { y:18, opacity:0 }, { y:0, opacity:1, duration:.55, stagger:.05, ease:'power3.out' });
+    }
+  }
+  row.addEventListener('click', e => { const b = e.target.closest('.tab-btn'); if (b) select(b.dataset.tab, true); });
+  row.addEventListener('keydown', e => {
+    const tabs = [...row.querySelectorAll('.tab-btn')], i = tabs.indexOf(document.activeElement);
+    if (i < 0) return;
+    if (e.key === 'ArrowRight'){ tabs[(i+1)%tabs.length].focus(); tabs[(i+1)%tabs.length].click(); }
+    if (e.key === 'ArrowLeft'){ tabs[(i-1+tabs.length)%tabs.length].focus(); tabs[(i-1+tabs.length)%tabs.length].click(); }
+  });
+  requestAnimationFrame(() => moveTrail(row.querySelector('.tab-btn')));
+  window.addEventListener('resize', () => moveTrail(row.querySelector('[aria-selected="true"]')));
+  document.querySelectorAll('[data-tablink]').forEach(a => a.addEventListener('click', () => setTimeout(() => select(a.dataset.tablink, true), 380)));
+})();
+
+/* ═══════════ GALERÍA + LIGHTBOX ═══════════ */
+const GALLERY = [
+  { img:'hogazaCorte', cat:'hogazas', t:'Hogaza Campesina', n:'36 horas de fermentación natural, notas tostadas de avellana y corteza crocante.', span:'md:col-span-2 md:row-span-2' },
+  { img:'croissant', cat:'hojaldres', t:'Croissant de mantequilla', n:'Laminado paciente, centro alveolado y capa exterior crujiente.', span:'md:row-span-2' },
+  { img:'basque', cat:'pasteleria', t:'Basque Burnt Cheesecake', n:'Superficie caramelizada, corazón cremoso y dulzor equilibrado.', span:'' },
+  { img:'barraCafe', cat:'cafe', t:'Barra de café', n:'Latte art con leche texturizada y espresso de Oaxaca.', span:'' },
+  { img:'tarta', cat:'pasteleria', t:'Tarta de frambuesas', n:'Frambuesa fresca y crema de mascarpone sobre masa sablée.', span:'md:row-span-2' },
+  { img:'grenado', cat:'obrador', t:'Greñado con navaja', n:'El corte que decide cómo cantará la corteza en el horno.', span:'' },
+  { img:'fachada', cat:'condesa', t:'Fachada en Condesa', n:'Fernando Montes de Oca 84, esquina con Vicente Suárez.', span:'md:col-span-2' },
+  { img:'vitrina', cat:'hojaldres condesa', t:'Vitrina matutina', n:'Croissants recién horneados esperando la primera fila.', span:'md:row-span-2' },
+  { img:'banneton', cat:'obrador', t:'Fermentación en banneton', n:'Reposo lento en cestas de mimbre enharinadas.', span:'' },
+  { img:'galleta', cat:'pasteleria', t:'Galleta NY con sal de Colima', n:'Centro chewy, chocolate fundido y escamas de sal.', span:'' },
+  { img:'terraza', cat:'condesa cafe', t:'Terraza pet-friendly', n:'Sombra de monstera, café tibio y croissant de las 8:00.', span:'md:col-span-2' },
+  { img:'laminado', cat:'hojaldres obrador', t:'Laminado de mantequilla', n:'Pliegues precisos que se vuelven cien capas doradas.', span:'' },
+  { img:'horno', cat:'obrador', t:'Horno de piso', n:'La boca del horno a 240 °C recibiendo la hogaza del día.', span:'' },
+  { img:'roll', cat:'hojaldres pasteleria', t:'Roll de canela', n:'Glaseado de cardamomo sobre espiral esponjosa.', span:'' },
+  { img:'estanteria', cat:'hogazas condesa', t:'Estantería de hogazas', n:'La pared de pan que da la bienvenida al salón.', span:'md:col-span-2' },
+  { img:'espolvoreado', cat:'obrador', t:'Harina en suspensión', n:'El gesto que abre cada jornada a las 4:00 am.', span:'' }
+];
+(function renderGallery(){
+  const grid = document.getElementById('gal-grid');
+  grid.innerHTML = GALLERY.map((g, i) =>
+    '<figure class="gal-item group relative overflow-hidden rounded-kraft border border-linework cursor-zoom-in '+g.span+'" data-cat="'+g.cat+'" data-idx="'+i+'" tabindex="0" role="button" aria-label="Ampliar: '+g.t+'">'+
+      '<img src="'+MT.IMG[g.img]+'" alt="'+g.t+' — '+g.n+'" loading="lazy" width="512" height="512" class="w-full h-full object-cover transition duration-700 group-hover:scale-[1.04]">'+
+      '<figcaption class="absolute inset-0 bg-cream/70 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition duration-500 flex flex-col justify-end p-4 pointer-events-none">'+
+        '<p class="font-display text-cocoa translate-y-2 group-hover:translate-y-0 transition duration-500" style="font-weight:700">'+g.t+'</p>'+
+        '<p class="font-editorial text-[12.5px] text-cocoa/80 translate-y-2 group-hover:translate-y-0 transition duration-500 delay-75">'+g.n+'</p>'+
+      '</figcaption></figure>').join('');
+
+  document.getElementById('gal-filters').addEventListener('click', e => {
+    const b = e.target.closest('.gal-filter'); if (!b) return;
+    document.querySelectorAll('.gal-filter').forEach(x => { const on = x===b; x.setAttribute('aria-pressed', String(on)); x.classList.toggle('!bg-cocoa', on); x.classList.toggle('!text-cream', on); });
+    const f = b.dataset.filter, items = [...grid.children];
+    const first = new Map(items.map(el => [el, el.getBoundingClientRect()]));
+    items.forEach(el => { el.style.display = (f==='todos' || el.dataset.cat.includes(f)) ? '' : 'none'; });
+    if (RM) return;
+    items.forEach(el => {
+      if (el.style.display === 'none') return;
+      const fo = first.get(el), la = el.getBoundingClientRect(), dx = fo.left-la.left, dy = fo.top-la.top;
+      if (dx || dy) el.animate([{ transform:'translate('+dx+'px,'+dy+'px)' }, { transform:'none' }], { duration:480, easing:'cubic-bezier(.22,1,.36,1)' });
+      else el.animate([{ opacity:.4, transform:'scale(.97)' }, { opacity:1, transform:'none' }], { duration:380, easing:'ease-out' });
+    });
+  });
+
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img'),
+        lbT = document.getElementById('lb-title'), lbN = document.getElementById('lb-note');
+  let cur = 0, lastFocus = null;
+  const visibleIdx = () => GALLERY.map((g,i)=>i).filter(i => { const el = grid.querySelector('[data-idx="'+i+'"]'); return el && el.style.display !== 'none'; });
+  function show(i){
+    const list = visibleIdx(); cur = Math.max(0, list.indexOf(i));
+    const g = GALLERY[list[cur]];
+    lbImg.src = MT.IMG[g.img]; lbImg.alt = g.t+' — '+g.n; lbT.textContent = g.t; lbN.textContent = g.n;
+  }
+  function open(i){
+    lastFocus = document.activeElement;
+    lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden'; show(i);
+    document.getElementById('lb-close').focus(); track('gallery_lightbox_opened');
+  }
+  function close(){
+    lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    lbImg.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    if (lastFocus) lastFocus.focus();
+  }
+  function step(dir){ const l = visibleIdx(); cur = (cur + dir + l.length) % l.length; show(l[cur]); }
+  grid.addEventListener('click', e => { const f = e.target.closest('.gal-item'); if (f) open(+f.dataset.idx); });
+  grid.addEventListener('keydown', e => { const f = e.target.closest('.gal-item'); if (f && (e.key==='Enter'||e.key===' ')){ e.preventDefault(); open(+f.dataset.idx); } });
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', () => step(-1));
+  document.getElementById('lb-next').addEventListener('click', () => step(1));
+  lb.addEventListener('keydown', e => { if (e.key==='Escape') close(); if (e.key==='ArrowRight') step(1); if (e.key==='ArrowLeft') step(-1); });
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+})();
+
+/* ═══════════ SOCIAL · CLUB · FAQ · FORMS · GIFT · MAPA ═══════════ */
+(function(){
+  const tiles = [ {img:'grenado',l:'IG · Bread ASMR',u:'https://instagram.com/masaytrigomx'}, {img:'vitrina',l:'IG · Vitrina 08:00',u:'https://instagram.com/masaytrigomx'},
+    {img:'croissantTorn',l:'TT · Crumb shot',u:'https://tiktok.com/@masaytrigomx'}, {img:'panMuerto',l:'IG · Temporada',u:'https://instagram.com/masaytrigomx'},
+    {img:'horno',l:'TT · Horneado',u:'https://tiktok.com/@masaytrigomx'}, {img:'terraza',l:'IG · Terraza',u:'https://instagram.com/masaytrigomx'} ];
+  document.getElementById('social-grid').innerHTML = tiles.map(t =>
+    '<a href="'+t.u+'" target="_blank" rel="noopener" class="social-tile group relative aspect-square overflow-hidden rounded-kraft border border-linework" data-track="'+(t.u.indexOf('tiktok')>-1?'tiktok_click':'instagram_click')+'">'+
+    '<img src="'+MT.IMG[t.img]+'" alt="'+t.l+'" loading="lazy" width="512" height="512" class="w-full h-full object-cover transition duration-700 group-hover:scale-[1.05]">'+
+    '<span class="absolute bottom-2 left-2 font-ui text-[10.5px] bg-cream/90 rounded-full px-2.5 py-1" style="font-weight:700">'+t.l+'</span></a>').join('');
+
+  let stampsHtml = '';
+  for (let i=1; i<=10; i++){
+    const last = i===10;
+    stampsHtml += '<div class="club-stamp aspect-square rounded-full border-2 flex items-center justify-center '+(last?'border-wheat bg-wheat/25':'border-cocoa/40 bg-paper')+'"'+(last?' id="stamp-10"':'')+'>'+
+      '<svg width="60%" height="60%" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 8c-7 0-12 5-12 11 0 8 6 13 12 13s12-5 12-13c0-6-5-11-12-11z" stroke="'+(last?'#8a5a1f':'#3E2723')+'" stroke-width="1.6"/><path d="M14 20c2-2.5 4-2.5 6 0s4 2.5 6 0" stroke="'+(last?'#8a5a1f':'#3E2723')+'" stroke-width="1.4" stroke-linecap="round"/></svg>'+
+      '<span class="sr-only">Sello '+i+(last?' — hogaza de cortesía':'')+'</span></div>';
+  }
+  document.getElementById('club-stamps').innerHTML = stampsHtml;
+})();
+
+const FAQS = [
+  ['¿Cómo debo conservar mi pan de masa madre en casa?','Guárdalo en bolsa de tela o papel kraft a temperatura ambiente, con el corte apoyado sobre una tabla; no lo refrigera. Puede congelarse rebanado y tostarse directamente.'],
+  ['¿El pan de masa madre es apto para celíacos?','No. Contiene gluten de trigo y se elabora en un obrador que manipula harina de trigo. No debe considerarse apto para personas con enfermedad celíaca.'],
+  ['¿A qué hora sale el pan caliente?','El primer lote de hogazas y croissants sale a las 08:00 hrs; el segundo horneado de baguettes y focaccias a las 12:30 hrs.'],
+  ['¿Puedo pedir para el mismo día?','Sí. El pan disponible en vitrina puede solicitarse para entrega inmediata mediante Tiendanube o WhatsApp hasta agotar existencias diarias.'],
+  ['¿Qué alérgenos manejan?','Etiquetamos gluten, lácteos, huevo, frutos secos y sésamo. Existe riesgo de contaminación cruzada en el obrador para alergias severas: consulta al equipo antes de consumir.'],
+  ['¿Con cuánto tiempo debo pedir un pastel personalizado?','Pasteles estándar con 24 horas; pasteles personalizados y bodas con 5 a 7 días; mesas de postres y catering con 10 días hábiles.'],
+  ['¿Tienen opciones vegetales?','Leches vegetales sin costo adicional, galletas veganas, barras de chía y tarta vegana según disponibilidad. Confirma alérgenos antes de comprar.']
+];
+(function(){
+  const list = document.getElementById('faq-list');
+  list.innerHTML = FAQS.map((f, i) =>
+    '<div class="py-1"><h3><button class="faq-q w-full flex items-center justify-between gap-4 py-5 text-left font-ui text-[15.5px]" style="font-weight:700" aria-expanded="false" aria-controls="faq-p-'+i+'" id="faq-b-'+i+'">'+f[0]+
+    '<svg class="faq-ic shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" stroke="#8a5a1f" stroke-width="2" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button></h3>'+
+    '<div class="faq-panel" id="faq-p-'+i+'" role="region" aria-labelledby="faq-b-'+i+'"><div><p class="pb-5 font-editorial text-cocoa/80 text-[15px] leading-relaxed">'+f[1]+'</p></div></div></div>').join('');
+  list.addEventListener('click', e => {
+    const b = e.target.closest('.faq-q'); if (!b) return;
+    const willOpen = b.getAttribute('aria-expanded') !== 'true';
+    list.querySelectorAll('.faq-q').forEach(x => x.setAttribute('aria-expanded','false'));
+    list.querySelectorAll('.faq-panel').forEach(p => p.classList.remove('open'));
+    list.querySelectorAll('.faq-ic').forEach(ic => ic.style.transform = 'rotate(0deg)');
+    if (willOpen){ b.setAttribute('aria-expanded','true'); document.getElementById(b.getAttribute('aria-controls')).classList.add('open'); b.querySelector('.faq-ic').style.transform = 'rotate(45deg)'; }
+  });
+})();
+
+(function(){
+  const form = document.getElementById('cake-form');
+  form.addEventListener('focusin', () => track('cake_form_start'), { once:true });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    let ok = true, firstBad = null;
+    [['cf-nombre','cf-nombre-err', v => v.trim().length > 1],
+     ['cf-tel','cf-tel-err', v => v.trim().length >= 8],
+     ['cf-mail','cf-mail-err', v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)]].forEach(pair => {
+      const inp = document.getElementById(pair[0]), bad = !pair[2](inp.value);
+      document.getElementById(pair[1]).classList.toggle('hidden', !bad);
+      inp.setAttribute('aria-invalid', String(bad));
+      if (bad && !firstBad) firstBad = inp;
+      ok = ok && !bad;
+    });
+    [['cf-evento'],['cf-fecha'],['cf-comensales']].forEach(p2 => {
+      const inp = document.getElementById(p2[0]), bad = !inp.value;
+      inp.setAttribute('aria-invalid', String(bad)); inp.style.borderColor = bad ? '#9c3b2e' : '';
+      if (bad && !firstBad) firstBad = inp; ok = ok && !bad;
+    });
+    if (!ok){ if (firstBad) firstBad.focus(); return; }
+    document.getElementById('cake-ok').classList.remove('hidden');
+    track('cake_form_submit', { evento: document.getElementById('cf-evento').value });
+    form.reset();
+  });
+  document.getElementById('club-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const m = document.getElementById('club-mail');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m.value)){ m.setAttribute('aria-invalid','true'); m.focus(); return; }
+    m.removeAttribute('aria-invalid');
+    document.getElementById('club-ok').classList.remove('hidden');
+    track('club_signup'); m.value = '';
+  });
+})();
+
+(function(){
+  const amt = document.getElementById('gift-amount'), card = document.getElementById('gift-card');
+  document.querySelectorAll('.gift-amt').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.gift-amt').forEach(x => { x.classList.remove('border-cocoa','bg-wheat/40'); x.classList.add('border-linework','bg-cream'); x.removeAttribute('aria-pressed'); });
+    b.classList.add('border-cocoa','bg-wheat/40'); b.classList.remove('border-linework','bg-cream'); b.setAttribute('aria-pressed','true');
+    amt.textContent = b.dataset.amt === '1000' ? '$1,000' : '$'+b.dataset.amt;
+    track('click_gift_card', { monto: b.dataset.amt });
+  }));
+  if (!RM && matchMedia('(pointer:fine)').matches){
+    const wrap = document.getElementById('gift-wrap');
+    wrap.addEventListener('mousemove', e => { const r = wrap.getBoundingClientRect(); card.style.transform = 'rotate('+(((e.clientX-r.left)/r.width-.5)*2).toFixed(2)+'deg)'; });
+    wrap.addEventListener('mouseleave', () => { card.style.transform = 'rotate(0deg)'; });
+  }
+})();
+
+(function(){
+  const ob = new IntersectionObserver((en, o) => { if (en[0].isIntersecting){ const f = document.getElementById('map-frame'); f.src = f.dataset.src; o.disconnect(); } }, { rootMargin:'200px' });
+  ob.observe(document.getElementById('map-card'));
+})();
+
+(function(){
+  if (RM || !matchMedia('(pointer:fine)').matches) return;
+  const ring = document.getElementById('cursor-ring');
+  let x=0,y=0,tx=0,ty=0,on=false;
+  window.addEventListener('mousemove', e => { tx=e.clientX; ty=e.clientY; if(!on){ on=true; ring.classList.add('on'); } }, { passive:true });
+  (function loop(){ x += (tx-x)*.18; y += (ty-y)*.18; ring.style.left = x+'px'; ring.style.top = y+'px'; requestAnimationFrame(loop); })();
+  document.addEventListener('mouseover', e => { ring.classList.toggle('big', !!e.target.closest('.gal-item, .btn-primary, .btn-ghost')); });
+})();
+
+/* ═══════════ POPUP + COOKIES (con cierre garantizado) ═══════════ */
+(function(){
+  const KEY = 'mt_popup_v1', popup = document.getElementById('popup');
+  let stored = 0; try { stored = +localStorage.getItem(KEY) || 0; } catch(err){}
+  const fresh = stored && (Date.now() - stored) < 14*864e5;
+  let lastFocus = null;
+  function dismiss(){
+    try { localStorage.setItem(KEY, String(Date.now())); } catch(err){}
+    popup.classList.remove('show');
+    popup.setAttribute('aria-hidden','true');
+    setTimeout(() => { popup.hidden = true; }, 520);
+    if (lastFocus) lastFocus.focus();
+  }
+  function openPopup(){
+    lastFocus = document.activeElement;
+    popup.hidden = false; popup.setAttribute('aria-hidden','false');
+    track('popup_shown');
+    requestAnimationFrame(() => popup.classList.add('show'));
+    setTimeout(() => { const n = document.getElementById('pp-nombre'); if (n) n.focus(); }, 480);
+  }
+  if (!fresh) setTimeout(() => { if (popup.hidden) openPopup(); }, 8000);
+  document.getElementById('popup-close').addEventListener('click', dismiss);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !popup.hidden) dismiss(); });
+  popup.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const f = [...popup.querySelectorAll('button,input,a')].filter(el => !el.disabled && el.offsetParent !== null);
+    if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]){ e.preventDefault(); f[f.length-1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length-1]){ e.preventDefault(); f[0].focus(); }
+  });
+  document.getElementById('popup-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const n = document.getElementById('pp-nombre'), m = document.getElementById('pp-mail'), c = document.getElementById('pp-consent');
+    let ok = true;
+    const checks = [[n, v => v.trim().length > 1], [m, v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)]];
+    checks.forEach(pair => { const bad = !pair[1](pair[0].value); pair[0].setAttribute('aria-invalid', String(bad)); if (bad){ pair[0].focus(); } ok = ok && !bad; });
+    if (!c.checked){ c.focus(); ok = false; }
+    if (!ok) return;
+    document.getElementById('popup-ok').classList.remove('hidden');
+    setTimeout(dismiss, 1600);
+  });
+
+  const CK = 'mt_cookie_consent', cookies = document.getElementById('cookies');
+  let hasConsent = false; try { hasConsent = !!localStorage.getItem(CK); } catch(err){}
+  if (!hasConsent) cookies.hidden = false;
+  function save(v){ try { localStorage.setItem(CK, JSON.stringify(Object.assign({ ts: Date.now() }, v))); } catch(err){} cookies.hidden = true; }
+  const cfgPanel = document.getElementById('cookie-config'), cfgBtn = document.getElementById('ck-config');
+  document.getElementById('ck-accept').addEventListener('click', () => save({ necessary:true, analytics:true, marketing:true }));
+  document.getElementById('ck-reject').addEventListener('click', () => save({ necessary:true, analytics:false, marketing:false }));
+  cfgBtn.addEventListener('click', () => { const open = cfgPanel.classList.toggle('hidden') === false; cfgBtn.setAttribute('aria-expanded', String(open)); });
+  document.getElementById('ck-save').addEventListener('click', () => save({ necessary:true, analytics:document.getElementById('ck-analytics').checked, marketing:document.getElementById('ck-marketing').checked }));
+})();
+
+/* ═══════════ MOTION: GSAP SCROLLTRIGGER BIDIRECCIONAL ═══════════ */
+(function(){
+  if (RM || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  const E1='power3.out', E2='power2.out', E3='sine.inOut';
+
+  gsap.timeline({ defaults:{ ease:E1 } })
+    .from('.hero-line', { yPercent:112, duration:1.1, stagger:.12 })
+    .from('#hero-eyebrow', { y:14, opacity:0, duration:.7 }, '-=0.7')
+    .from('#hero-lead', { y:14, opacity:0, duration:.8 }, '-=0.55')
+    .from('#hero-ctas', { y:18, opacity:0, duration:.8 }, '-=0.5')
+    .from('.trust-item', { y:10, opacity:0, duration:.5, stagger:.08 }, '-=0.4')
+    .from('#wheat-line-1, #wheat-line-2', { strokeDasharray:'900', strokeDashoffset:900, duration:1.6, ease:E3 }, '-=0.9')
+    .from('#wheat-ears path', { opacity:0, duration:.8, stagger:.05 }, '-=0.9');
+
+  gsap.to(['#hero-h1','#hero-lead','#hero-ctas','#hero-trust'], {
+    opacity:0, y:-40, ease:'none',
+    scrollTrigger:{ trigger:'#top', start:'top top', end:'bottom top', scrub:.4 }
+  });
+
+  function scene(trigger, enter, leaveBack){
+    const st = ScrollTrigger.create({ trigger, start:'top 84%', end:'bottom 10%', onEnter:enter, onEnterBack:enter, onLeaveBack:leaveBack });
+    if (st.progress > 0) enter();
+    return st;
+  }
+
+  gsap.set('#oficio [data-anim="stamp"]', { opacity:0, scale:.84, rotate:-3 });
+  gsap.set('#oficio-line path', { strokeDasharray:2600, strokeDashoffset:2600 });
+  scene('#oficio',
+    () => { gsap.to('#oficio [data-anim="stamp"]', { opacity:1, scale:1, rotate:0, duration:.9, stagger:.12, ease:'expo.out' });
+            gsap.to('#oficio-line path', { strokeDashoffset:0, duration:1.6, ease:E3 });
+            document.querySelectorAll('#oficio .count').forEach(el => {
+              const target = +el.dataset.count;
+              gsap.fromTo(el, { innerText:0 }, { innerText:target, duration:1.4, ease:E2, snap:{ innerText:1 },
+                onUpdate: function(){ el.textContent = Math.round(gsap.getProperty(el,'innerText')); }, onComplete: () => { el.textContent = target; } }); }); },
+    () => { gsap.to('#oficio [data-anim="stamp"]', { opacity:.18, scale:.96, rotate:1, duration:.7, ease:E2 });
+            gsap.to('#oficio-line path', { strokeDashoffset:2600, duration:.9, ease:E2 }); }
+  );
+
+  const words = document.querySelector('.split-words');
+  words.innerHTML = words.textContent.trim().split(/\s+/).map(w => '<span class="inline-block">'+w+'</span>').join(' ');
+  gsap.set('.split-words span', { opacity:0, y:16 });
+  gsap.set('.story-img img', { clipPath:'inset(0 0 100% 0)' });
+  gsap.set('.story-p', { opacity:0, x:-18 });
+  gsap.set('.tl-step', { opacity:0, y:12 });
+  scene('#historia',
+    () => { gsap.to('.split-words span', { opacity:1, y:0, duration:.6, stagger:.05, ease:E2 });
+            gsap.to('.story-img img', { clipPath:'inset(0 0 0% 0)', duration:1.2, stagger:.14, ease:E1 });
+            gsap.to('.story-p', { opacity:1, x:0, duration:.8, stagger:.14, ease:E2 });
+            gsap.to('.tl-step', { opacity:1, y:0, duration:.5, stagger:.1, ease:E2, delay:.3 }); },
+    () => { gsap.to('.story-img img', { clipPath:'inset(0 0 100% 0)', duration:.8, stagger:.08, ease:E2 });
+            gsap.to('.split-words span', { opacity:0, y:-10, duration:.4, stagger:.02, ease:E2 });
+            gsap.to('.story-p', { opacity:0, x:14, duration:.5, stagger:.06, ease:E2 });
+            gsap.to('.tl-step', { opacity:0, y:8, duration:.35, stagger:.05, ease:E2 }); }
+  );
+
+  let priced = false;
+  gsap.set('#menu .stamp-seal, #menu-title', { opacity:0, y:20 });
+  scene('#menu',
+    () => { gsap.to(['#menu .stamp-seal','#menu-title'], { opacity:1, y:0, duration:.8, stagger:.1, ease:E2 });
+            gsap.fromTo('#menu .menu-card', { y:18, opacity:0 }, { y:0, opacity:1, duration:.6, stagger:.05, ease:E1 });
+            if (!priced){ priced = true;
+              document.querySelectorAll('#menu .price').forEach(el => {
+                const n = +el.dataset.num; if (!n) return; const txt = el.textContent;
+                gsap.fromTo(el, { innerText:0 }, { innerText:n, duration:1.1, ease:E2, snap:{ innerText:1 },
+                  onUpdate: function(){ el.textContent = txt.replace(/\$[\d,]+/, '$'+Math.round(gsap.getProperty(el,'innerText'))); },
+                  onComplete: () => { el.textContent = txt; } }); }); } },
+    () => { gsap.to('#menu .menu-card', { y:-10, opacity:0, duration:.45, stagger:{ each:.03, from:'end' }, ease:E2 });
+            gsap.to(['#menu .stamp-seal','#menu-title'], { opacity:.3, y:-8, duration:.5, ease:E2 }); }
+  );
+
+  gsap.set('.star-card [data-door]', { xPercent:0 });
+  gsap.set('.star-card .star-lines path, .star-card .star-lines circle', { strokeDasharray:200, strokeDashoffset:200 });
+  scene('#estrellas',
+    () => { gsap.to('.star-card [data-door]', { xPercent:102, duration:1.1, stagger:.16, ease:E1 });
+            gsap.to('.star-card .star-lines path, .star-card .star-lines circle', { strokeDashoffset:0, duration:1.2, stagger:.06, ease:E3, delay:.3 }); },
+    () => { gsap.to('.star-card [data-door]', { xPercent:0, duration:.8, stagger:.1, ease:E2 });
+            gsap.to('.star-card .star-lines path, .star-card .star-lines circle', { strokeDashoffset:200, duration:.6, ease:E2 }); }
+  );
+
+  gsap.set('.season-card', { opacity:0, y:26, rotate:-2 });
+  gsap.set('.season-stamp', { opacity:0, scale:.6 });
+  scene('#temporada',
+    () => { gsap.to('.season-card', { opacity:1, y:0, rotate:0, duration:.9, stagger:.12, ease:E1 });
+            gsap.to('.season-stamp', { opacity:1, scale:1, duration:.7, stagger:.12, delay:.3, ease:'back.out(1.6)' }); },
+    () => { gsap.to('.season-stamp', { opacity:0, scale:1.25, duration:.45, ease:E2 });
+            gsap.to('.season-card', { opacity:0, y:18, rotate:-1.5, duration:.6, stagger:.06, ease:E2 }); }
+  );
+
+  gsap.set('#kraft-ribbon', { scaleY:0 });
+  gsap.set('.cake-photo', { opacity:0, clipPath:'inset(12% 12% 12% 12%)' });
+  scene('#eventos',
+    () => { gsap.to('#kraft-ribbon', { scaleY:1, duration:1, ease:E1 });
+            gsap.to('.cake-photo', { opacity:1, clipPath:'inset(0% 0% 0% 0%)', duration:.9, stagger:.1, ease:E1, delay:.2 }); },
+    () => { gsap.to('.cake-photo', { opacity:.25, clipPath:'inset(10% 10% 10% 10%)', duration:.6, stagger:.05, ease:E2 });
+            gsap.to('#kraft-ribbon', { scaleY:.2, duration:.7, ease:E2 }); }
+  );
+
+  gsap.set(['#route-pick','#route-del'], { strokeDasharray:600, strokeDashoffset:600 });
+  gsap.set('.delivery-card', { opacity:0, y:24 });
+  scene('#entrega',
+    () => { gsap.to('#route-pick', { strokeDashoffset:0, duration:1.1, ease:E3 });
+            gsap.to('#route-del', { strokeDashoffset:0, duration:1.1, ease:E3, delay:.15 });
+            gsap.to('.delivery-card', { opacity:1, y:0, duration:.8, stagger:.15, delay:.4, ease:E1 }); },
+    () => { gsap.to('.delivery-card', { opacity:0, y:16, duration:.5, stagger:.08, ease:E2 });
+            gsap.to(['#route-pick','#route-del'], { strokeDashoffset:600, duration:.8, ease:E2 }); }
+  );
+
+  gsap.set('.founder', { opacity:0, y:26 });
+  gsap.set('#flour-trace', { strokeDasharray:900, strokeDashoffset:900 });
+  scene('#nosotros',
+    () => { gsap.to('.founder', { opacity:1, y:0, duration:.9, stagger:.16, ease:E1 });
+            gsap.to('.founder-img', { filter:'sepia(0)', duration:1.4, stagger:.16, ease:E2 });
+            gsap.to('#flour-trace', { strokeDashoffset:0, duration:1.6, ease:E3, delay:.3 }); },
+    () => { gsap.to('.founder-img', { filter:'sepia(.55)', duration:.8, ease:E2 });
+            gsap.to('#flour-trace', { strokeDashoffset:900, duration:.8, ease:E2 });
+            gsap.to('.founder', { opacity:0, y:18, duration:.6, stagger:.08, ease:E2 }); }
+  );
+
+  gsap.set('.gal-item', { opacity:0, clipPath:'inset(18% 6% 18% 6%)' });
+  scene('#galeria',
+    () => gsap.to('.gal-item', { opacity:1, clipPath:'inset(0% 0% 0% 0%)', duration:.8, stagger:.05, ease:E1, clearProps:'clip-path' }),
+    () => gsap.to('.gal-item', { opacity:0, clipPath:'inset(14% 4% 14% 4%)', duration:.5, stagger:{ each:.02, from:'end' }, ease:E2 })
+  );
+
+  gsap.set('.club-stamp', { opacity:0, scale:.6 });
+  gsap.set('.club-benefit', { opacity:0, x:-16 });
+  scene('#club',
+    () => { gsap.to('.club-stamp', { opacity:1, scale:1, duration:.5, stagger:.09, ease:'back.out(1.8)' });
+            gsap.fromTo('#stamp-10', { boxShadow:'0 0 0 0 rgba(216,164,95,0)' }, { boxShadow:'0 0 34px 6px rgba(216,164,95,.55)', duration:1, delay:1, yoyo:true, repeat:1, ease:E3 });
+            gsap.to('.club-benefit', { opacity:1, x:0, duration:.6, stagger:.12, ease:E2 }); },
+    () => { gsap.to('.club-stamp', { opacity:0, scale:.7, duration:.4, stagger:{ each:.05, from:'end' }, ease:E2 });
+            gsap.to('.club-benefit', { opacity:0, x:12, duration:.4, stagger:.06, ease:E2 }); }
+  );
+
+  gsap.set('#gift-card', { y:70, opacity:0, rotate:3 });
+  gsap.set('.gift-amt', { opacity:0, y:10 });
+  scene('#giftcards',
+    () => { gsap.to('#gift-card', { y:0, opacity:1, rotate:0, duration:1.1, ease:E1 });
+            gsap.to('.gift-amt', { opacity:1, y:0, duration:.5, stagger:.1, delay:.5, ease:E2 }); },
+    () => { gsap.to('.gift-amt', { opacity:0, y:8, duration:.35, stagger:.05, ease:E2 });
+            gsap.to('#gift-card', { y:60, opacity:0, rotate:2, duration:.8, ease:E2 }); }
+  );
+
+  gsap.set('.testi', { opacity:0, y:30 });
+  document.querySelectorAll('.testi .stars path').forEach(p => { const L = p.getTotalLength ? p.getTotalLength() : 60; p.style.strokeDasharray = L; p.style.strokeDashoffset = L; });
+  scene('#testimonios',
+    () => { gsap.to('.testi', { opacity:1, y:0, duration:.9, stagger:.14, ease:E1 });
+            gsap.to('.testi .stars path', { strokeDashoffset:0, duration:.5, stagger:.09, delay:.4, ease:E2 }); },
+    () => { gsap.to('.testi .stars path', { strokeDashoffset:60, duration:.4, stagger:{ each:.04, from:'end' }, ease:E2 });
+            gsap.to('.testi', { opacity:0, y:20, duration:.6, stagger:.08, ease:E2 }); }
+  );
+
+  gsap.set('#map-card', { rotateX:55, opacity:0, transformPerspective:900 });
+  gsap.set('.hours-row', { opacity:0, x:-14 });
+  scene('#visitanos',
+    () => { gsap.to('#map-card', { rotateX:0, opacity:1, duration:1.2, ease:E1 });
+            gsap.to('.hours-row', { opacity:1, x:0, duration:.6, stagger:.12, delay:.3, ease:E2 }); },
+    () => { gsap.to('.hours-row', { opacity:0, x:10, duration:.4, stagger:.06, ease:E2 });
+            gsap.to('#map-card', { rotateX:40, opacity:0, duration:.8, ease:E2 }); }
+  );
+
+  gsap.set('#faq-list > div', { opacity:0, y:16 });
+  gsap.set('.social-tile', { opacity:0, scale:.94 });
+  scene('#faq', () => gsap.to('#faq-list > div', { opacity:1, y:0, duration:.6, stagger:.07, ease:E2 }),
+                 () => gsap.to('#faq-list > div', { opacity:0, y:10, duration:.4, stagger:.04, ease:E2 }));
+  scene('#social', () => gsap.to('.social-tile', { opacity:1, scale:1, duration:.6, stagger:.07, ease:E1 }),
+                     () => gsap.to('.social-tile', { opacity:0, scale:.95, duration:.4, stagger:.04, ease:E2 }));
+
+  /* Red de seguridad: si algo queda invisible, se muestra */
+  window.addEventListener('load', () => {
+    setTimeout(() => ScrollTrigger.refresh(), 400);
+    setTimeout(() => {
+      document.querySelectorAll('[data-anim], .story-img img, .cake-photo, .delivery-card, .founder, .gal-item, .club-stamp, .testi, #map-card, #gift-card, .season-card, .hours-row, .tl-step, .story-p').forEach(el => {
+        const s = getComputedStyle(el);
+        if (parseFloat(s.opacity) < 0.35 && !el.closest('#lightbox')) gsap.set(el, { opacity:1 });
+      });
+    }, 2500);
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Masa & Trigo — Panadería Rústica de Masa Madre y Pastelería de Autor",
+  "legalName": "Panificadora Artesanal de la Condesa S.A. de C.V.",
+  "slogan": "El tiempo perfecto hace al pan honesto.",
+  "foundingDate": "2020",
+  "telephone": "+52 55 5211 9084",
+  "email": "hola@masaytrigo.com.mx",
+  "address": { "@type": "PostalAddress", "streetAddress": "Calle Fernando Montes de Oca 84, Local A, Col. Condesa, Alcaldía Cuauhtémoc", "addressLocality": "Ciudad de México", "postalCode": "06140", "addressCountry": "MX" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "07:30", "closes": "20:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:30", "closes": "17:00" }
+  ],
+  "sameAs": ["https://instagram.com/masaytrigomx","https://facebook.com/masaytrigomx","https://tiktok.com/@masaytrigomx","https://youtube.com/@masaytrigomx","https://pinterest.com/masaytrigomx","https://masaytrigo.tiendanube.com"],
+  "servesCuisine": "Panadería artesanal y pastelería de autor",
+  "priceRange": "$45 – $850 MXN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cómo debo conservar mi pan de masa madre en casa?", "acceptedAnswer": { "@type": "Answer", "text": "Guardarlo en bolsa de tela o papel kraft a temperatura ambiente, con el corte apoyado sobre una tabla; no refrigerar. Puede congelarse rebanado y tostarse directamente." } },
+    { "@type": "Question", "name": "¿El pan de masa madre es apto para celíacos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Contiene gluten de trigo y se elabora en un obrador que manipula harina de trigo. No debe considerarse apto para personas con enfermedad celíaca." } },
+    { "@type": "Question", "name": "¿A qué hora sale el pan caliente?", "acceptedAnswer": { "@type": "Answer", "text": "Primer lote de hogazas y croissants a las 08:00 hrs; segundo horneado de baguettes y focaccias a las 12:30 hrs." } },
+    { "@type": "Question", "name": "¿Puedo pedir para el mismo día?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, el pan disponible en vitrina puede solicitarse para entrega inmediata mediante Tiendanube o WhatsApp hasta agotar existencias diarias." } },
+    { "@type": "Question", "name": "¿Qué alérgenos manejan?", "acceptedAnswer": { "@type": "Answer", "text": "Etiquetamos gluten, lácteos, huevo, frutos secos y sésamo. Existe riesgo de contaminación cruzada en el obrador para alergias severas." } },
+    { "@type": "Question", "name": "¿Con cuánto tiempo debo pedir un pastel personalizado?", "acceptedAnswer": { "@type": "Answer", "text": "Pasteles estándar con 24 horas; pasteles personalizados y bodas con 5 a 7 días; catering con 10 días hábiles." } },
+    { "@type": "Question", "name": "¿Tienen opciones vegetales?", "acceptedAnswer": { "@type": "Answer", "text": "Leches vegetales sin costo adicional, galletas veganas, barras de chía y opciones específicas de tarta vegana según disponibilidad. Confirmar alérgenos antes de comprar." } }
+  ]
+}
+</script>
+</body>
+</html>
